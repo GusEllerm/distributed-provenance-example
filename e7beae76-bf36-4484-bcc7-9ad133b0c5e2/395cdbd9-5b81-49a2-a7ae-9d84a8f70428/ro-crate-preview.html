@@ -1,0 +1,640 @@
+
+
+<html>
+<head>
+
+
+<script type="application/ld+json"> 
+  {
+  "@context": "https://w3id.org/ro/crate/1.1/context",
+  "@graph": [
+    {
+      "@id": "./",
+      "@type": "Dataset",
+      "name": "Distributed Step Crate Example",
+      "description": "An example of a distributed step crate generated during a Globus Flows workflow run.",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "datePublished": "2025-06-26T23:40:01+00:00",
+      "hasPart": [
+        {
+          "@id": "16938cab-126e-4707-b4c6-54da56fb629e"
+        },
+        {
+          "@id": "4ce5a46a-fa3c-4366-83a3-80e3abde640a"
+        },
+        {
+          "@id": "40bcc1d4-fbd3-4e4a-bd5a-970dff566164"
+        },
+        {
+          "@id": "e451c118-2e77-4e2a-b934-99b80cfe8471"
+        },
+        {
+          "@id": "e444ef40-6b12-452c-9978-a3e484b2484a"
+        }
+      ],
+      "mainEntity": {
+        "@id": "e444ef40-6b12-452c-9978-a3e484b2484a"
+      },
+      "@reverse": {
+        "about": [
+          {
+            "@id": "ro-crate-metadata.json"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "about": {
+        "@id": "./"
+      },
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.1"
+      }
+    },
+    {
+      "@id": "16938cab-126e-4707-b4c6-54da56fb629e",
+      "@type": "File",
+      "encodingFormat": "image/png",
+      "name": "CPU usage",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "4ce5a46a-fa3c-4366-83a3-80e3abde640a",
+      "@type": "File",
+      "encodingFormat": "json",
+      "name": "CPU usage",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          }
+        ],
+        "value": [
+          {
+            "@id": "#c76d20c0-a8a2-42e1-98ce-762f0cf64bd4"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "e444ef40-6b12-452c-9978-a3e484b2484a",
+      "name": "Distributed Step Crate",
+      "@type": [
+        "CreateAction",
+        "HowTo",
+        "ActionAccessSpecification",
+        "Schedule",
+        "File"
+      ],
+      "hasPart": {
+        "@id": "#bcc0c0cd-ffde-4c77-b3df-8741c9452e75"
+      },
+      "object": {
+        "@id": "40bcc1d4-fbd3-4e4a-bd5a-970dff566164"
+      },
+      "requiresSubscription": "False",
+      "result": {
+        "@id": "e451c118-2e77-4e2a-b934-99b80cfe8471"
+      },
+      "step": {
+        "@id": "#23ac5690-431e-4ea6-a879-c0d216dadf3c"
+      },
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          }
+        ],
+        "mainEntity": [
+          {
+            "@id": "./"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#23ac5690-431e-4ea6-a879-c0d216dadf3c",
+      "@type": "HowToStep",
+      "position": "395cdbd9-5b81-49a2-a7ae-9d84a8f70428",
+      "sourceOrganization": {
+        "@id": "#ffe4fdeb-39a9-4a7a-9d74-382ea7bdad76"
+      },
+      "@reverse": {
+        "step": [
+          {
+            "@id": "e444ef40-6b12-452c-9978-a3e484b2484a"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#19d1a07a-96bf-4fda-8c17-ef512b9e0fbc",
+      "@type": "HardwareComponent",
+      "Address sizes": "40 bits physical, 48 bits virtual",
+      "Architecture": "x86_64",
+      "BogoMIPS": "5290.06",
+      "Byte Order": "Little Endian",
+      "CPU family": "25",
+      "CPU op-mode(s)": "32-bit, 64-bit",
+      "CPU(s)": "4",
+      "Core(s) per socket": "1",
+      "Flags": "fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext perfctr_core ssbd ibrs ibpb stibp vmmcall fsgsbase tsc_adjust bmi1 avx2 smep bmi2 rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr wbnoinvd arat npt nrip_save umip vaes vpclmulqdq rdpid arch_capabilities",
+      "Hypervisor vendor": "KVM",
+      "L1d cache": "128 KiB (4 instances)",
+      "L1i cache": "128 KiB (4 instances)",
+      "L2 cache": "2 MiB (4 instances)",
+      "L3 cache": "128 MiB (4 instances)",
+      "Model": "1",
+      "Model name": "AMD EPYC-Milan Processor",
+      "NUMA node(s)": "1",
+      "NUMA node0 CPU(s)": "0-3",
+      "On-line CPU(s) list": "0-3",
+      "Socket(s)": "4",
+      "Stepping": "1",
+      "Thread(s) per core": "1",
+      "Vendor ID": "AuthenticAMD",
+      "Virtualization": "AMD-V",
+      "Virtualization type": "full",
+      "Vulnerability Gather data sampling": "Not affected",
+      "Vulnerability Itlb multihit": "Not affected",
+      "Vulnerability L1tf": "Not affected",
+      "Vulnerability Mds": "Not affected",
+      "Vulnerability Meltdown": "Not affected",
+      "Vulnerability Mmio stale data": "Not affected",
+      "Vulnerability Retbleed": "Not affected",
+      "Vulnerability Spec rstack overflow": "Mitigation; safe RET, no microcode",
+      "Vulnerability Spec store bypass": "Mitigation; Speculative Store Bypass disabled via prctl and seccomp",
+      "Vulnerability Spectre v1": "Mitigation; usercopy/swapgs barriers and __user pointer sanitization",
+      "Vulnerability Spectre v2": "Mitigation; Retpolines, IBPB conditional, IBRS_FW, STIBP disabled, RSB filling, PBRSB-eIBRS Not affected",
+      "Vulnerability Srbds": "Not affected",
+      "Vulnerability Tsx async abort": "Not affected",
+      "description": "CPU properties as reported by lscpu",
+      "name": "CPU",
+      "performance": {
+        "@id": "#c76d20c0-a8a2-42e1-98ce-762f0cf64bd4"
+      },
+      "@reverse": {
+        "observationAbout": [
+          {
+            "@id": "#c76d20c0-a8a2-42e1-98ce-762f0cf64bd4"
+          }
+        ],
+        "component": [
+          {
+            "@id": "#bcc0c0cd-ffde-4c77-b3df-8741c9452e75"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#c76d20c0-a8a2-42e1-98ce-762f0cf64bd4",
+      "@type": "Observation",
+      "image": "16938cab-126e-4707-b4c6-54da56fb629e",
+      "maxValue": "0.0",
+      "measurementTechnique": "Psutil.cpu_percent polled at 0.05",
+      "minValue": "0.0",
+      "observationAbout": {
+        "@id": "#19d1a07a-96bf-4fda-8c17-ef512b9e0fbc"
+      },
+      "value": {
+        "@id": "4ce5a46a-fa3c-4366-83a3-80e3abde640a"
+      },
+      "@reverse": {
+        "performance": [
+          {
+            "@id": "#19d1a07a-96bf-4fda-8c17-ef512b9e0fbc"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#2901f5bd-3103-4d72-a3b6-4310ba80bf36",
+      "@type": "HardwareComponent",
+      "active": "3142991872",
+      "available": "6736965632",
+      "buffers": "147083264",
+      "cached": "6189883392",
+      "description": "RAM properties as reported by mem_info()",
+      "free": "725217280",
+      "inactive": "3844759552",
+      "name": "RAM",
+      "percent": "19.1",
+      "shared": "3461120",
+      "slab": "502702080",
+      "total": "8323014656",
+      "used": "1260830720",
+      "@reverse": {
+        "component": [
+          {
+            "@id": "#bcc0c0cd-ffde-4c77-b3df-8741c9452e75"
+          }
+        ]
+      }
+    },
+    {
+      "1K-blocks": "102626232",
+      "@id": "#5b5d0146-bd8b-4099-ba54-db6f2810878f",
+      "@type": "HardwareComponent",
+      "Available": "97364452",
+      "Filesystem": "/dev/vdb",
+      "Mounted": "/mnt/storage",
+      "Use%": "1%",
+      "Used": "2516",
+      "description": "Storage properties as reported by ds",
+      "name": "Storage",
+      "@reverse": {
+        "component": [
+          {
+            "@id": "#bcc0c0cd-ffde-4c77-b3df-8741c9452e75"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#bcc0c0cd-ffde-4c77-b3df-8741c9452e75",
+      "@type": "HardwareRuntime",
+      "name": "Hardware Runtime",
+      "component": [
+        {
+          "@id": "#19d1a07a-96bf-4fda-8c17-ef512b9e0fbc"
+        },
+        {
+          "@id": "#5b5d0146-bd8b-4099-ba54-db6f2810878f"
+        },
+        {
+          "@id": "#2901f5bd-3103-4d72-a3b6-4310ba80bf36"
+        }
+      ],
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "e444ef40-6b12-452c-9978-a3e484b2484a"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#ffe4fdeb-39a9-4a7a-9d74-382ea7bdad76",
+      "@type": "Organization",
+      "name": "The University of Auckland",
+      "@reverse": {
+        "sourceOrganization": [
+          {
+            "@id": "#23ac5690-431e-4ea6-a879-c0d216dadf3c"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "40bcc1d4-fbd3-4e4a-bd5a-970dff566164",
+      "@type": "File",
+      "contentSize": 86091,
+      "encodingFormat": "text/plain",
+      "name": "RevText input",
+      "source": "rev_text/input/test.txt",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          }
+        ],
+        "object": [
+          {
+            "@id": "e444ef40-6b12-452c-9978-a3e484b2484a"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "e451c118-2e77-4e2a-b934-99b80cfe8471",
+      "@type": "File",
+      "contentSize": 85547,
+      "encodingFormat": "text/plain",
+      "name": "RevText output",
+      "source": "rev_text/output/test.txt",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          }
+        ],
+        "result": [
+          {
+            "@id": "e444ef40-6b12-452c-9978-a3e484b2484a"
+          }
+        ]
+      }
+    }
+  ]
+}
+</script>
+
+    
+<!-- script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script -->
+<script src="https://unpkg.com/ro-crate-html-js/dist/ro-crate-dynamic.js"></script>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<meta charset='utf-8'/>
+<style>
+
+table.table {
+  padding-bottom: 300px;
+}
+</style>
+</head>
+
+
+<body>
+
+  <nav class="navbar">
+
+    <ul class="nav navbar-nav" >
+        <li ><a href="#"><span class="glyphicon glyphicon-home dataset_name">&nbsp;Distributed Step Crate Example</span></a></li>
+    </ul>
+
+  </nav>
+<div class="container">
+<div class="jumbotron">
+<h4 class="citation"></h3>
+<h3 class="item_name">Distributed Step Crate Example</h4>
+
+
+<a href="./ro-crate-metadata.json">⬇️🏷️ Download all the metadata for <span class='name'>Distributed Step Crate Example</span> in JSON-LD format</a>
+
+
+<div id="check"></div>
+
+
+</div>
+
+
+
+<div id="summary">
+<div class='all-meta'>
+           <div>
+            <h3> Distributed Step Crate Example</h3>
+            
+            
+            
+            
+        <div id="./">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>./</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>Distributed Step Crate Example</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Dataset</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">description<span>&nbsp;</span><a href="http://schema.org/description">[?]</a></th>
+            <td style='text-align:left'><span>An example of a distributed step crate generated during a Globus Flows workflow run.</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">datePublished<span>&nbsp;</span><a href="http://schema.org/datePublished">[?]</a></th>
+            <td style='text-align:left'><span>2025-06-26T23:40:01+00:00</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">license<span>&nbsp;</span><a href="http://schema.org/license">[?]</a></th>
+            <td style='text-align:left'><a href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#16938cab-126e-4707-b4c6-54da56fb629e">CPU usage</a></li>
+                        
+                        <li><a href="#4ce5a46a-fa3c-4366-83a3-80e3abde640a">CPU usage</a></li>
+                        
+                        <li><a href="#40bcc1d4-fbd3-4e4a-bd5a-970dff566164">RevText input</a></li>
+                        
+                        <li><a href="#e451c118-2e77-4e2a-b934-99b80cfe8471">RevText output</a></li>
+                        
+                        <li><a href="#e444ef40-6b12-452c-9978-a3e484b2484a">Distributed Step Crate</a></li>
+                        </ul></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">mainEntity<span>&nbsp;</span><a href="http://schema.org/mainEntity">[?]</a></th>
+            <td style='text-align:left'><a href="#e444ef40-6b12-452c-9978-a3e484b2484a">Distributed Step Crate</a></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">about<span>&nbsp;</span><a href="http://schema.org/about">[?]</a></th>
+            <td style='text-align:left'><a href="#ro-crate-metadata.json">ro-crate-metadata.json</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="16938cab-126e-4707-b4c6-54da56fb629e">⬇️ Download: </a> CPU usage</h3>
+            
+            
+            
+            
+        <div id="16938cab-126e-4707-b4c6-54da56fb629e">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>16938cab-126e-4707-b4c6-54da56fb629e</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>CPU usage</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">encodingFormat<span>&nbsp;</span><a href="http://schema.org/encodingFormat">[?]</a></th>
+            <td style='text-align:left'><span>image/png</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#./">Distributed Step Crate Example</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="4ce5a46a-fa3c-4366-83a3-80e3abde640a">⬇️ Download: </a> CPU usage</h3>
+            
+            
+            
+            
+        <div id="4ce5a46a-fa3c-4366-83a3-80e3abde640a">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>4ce5a46a-fa3c-4366-83a3-80e3abde640a</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>CPU usage</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">encodingFormat<span>&nbsp;</span><a href="http://schema.org/encodingFormat">[?]</a></th>
+            <td style='text-align:left'><span>json</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#./">Distributed Step Crate Example</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">value<span>&nbsp;</span><a href="http://schema.org/value">[?]</a></th>
+            <td style='text-align:left'><a href="#%23c76d20c0-a8a2-42e1-98ce-762f0cf64bd4">[object Object]</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="40bcc1d4-fbd3-4e4a-bd5a-970dff566164">⬇️ Download: </a> RevText input</h3>
+            
+            
+            
+            
+        <div id="40bcc1d4-fbd3-4e4a-bd5a-970dff566164">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>40bcc1d4-fbd3-4e4a-bd5a-970dff566164</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>RevText input</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">encodingFormat<span>&nbsp;</span><a href="http://schema.org/encodingFormat">[?]</a></th>
+            <td style='text-align:left'><span>text/plain</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">contentSize<span>&nbsp;</span><a href="http://schema.org/contentSize">[?]</a></th>
+            <td style='text-align:left'><span>86091</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">source</th>
+            <td style='text-align:left'><span>rev_text/input/test.txt</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#./">Distributed Step Crate Example</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">object<span>&nbsp;</span><a href="http://schema.org/object">[?]</a></th>
+            <td style='text-align:left'><a href="#e444ef40-6b12-452c-9978-a3e484b2484a">Distributed Step Crate</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="e451c118-2e77-4e2a-b934-99b80cfe8471">⬇️ Download: </a> RevText output</h3>
+            
+            
+            
+            
+        <div id="e451c118-2e77-4e2a-b934-99b80cfe8471">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>e451c118-2e77-4e2a-b934-99b80cfe8471</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>RevText output</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">encodingFormat<span>&nbsp;</span><a href="http://schema.org/encodingFormat">[?]</a></th>
+            <td style='text-align:left'><span>text/plain</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">contentSize<span>&nbsp;</span><a href="http://schema.org/contentSize">[?]</a></th>
+            <td style='text-align:left'><span>85547</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">source</th>
+            <td style='text-align:left'><span>rev_text/output/test.txt</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#./">Distributed Step Crate Example</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">result<span>&nbsp;</span><a href="http://schema.org/result">[?]</a></th>
+            <td style='text-align:left'><a href="#e444ef40-6b12-452c-9978-a3e484b2484a">Distributed Step Crate</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="e444ef40-6b12-452c-9978-a3e484b2484a">⬇️ Download: </a> Distributed Step Crate</h3>
+            
+            
+            
+            
+        <div id="e444ef40-6b12-452c-9978-a3e484b2484a">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>e444ef40-6b12-452c-9978-a3e484b2484a</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>Distributed Step Crate</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><ul>
+                        <li><span>CreateAction</span></li>
+                        
+                        <li><span>HowTo</span></li>
+                        
+                        <li><span>ActionAccessSpecification</span></li>
+                        
+                        <li><span>Schedule</span></li>
+                        
+                        <li><span>File</span></li>
+                        </ul></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#%23bcc0c0cd-ffde-4c77-b3df-8741c9452e75">Hardware Runtime</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">object<span>&nbsp;</span><a href="http://schema.org/object">[?]</a></th>
+            <td style='text-align:left'><a href="#40bcc1d4-fbd3-4e4a-bd5a-970dff566164">RevText input</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">requiresSubscription<span>&nbsp;</span><a href="http://schema.org/requiresSubscription">[?]</a></th>
+            <td style='text-align:left'><span>False</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">result<span>&nbsp;</span><a href="http://schema.org/result">[?]</a></th>
+            <td style='text-align:left'><a href="#e451c118-2e77-4e2a-b934-99b80cfe8471">RevText output</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">step<span>&nbsp;</span><a href="http://schema.org/step">[?]</a></th>
+            <td style='text-align:left'><a href="#%2323ac5690-431e-4ea6-a879-c0d216dadf3c">#23ac5690-431e-4ea6-a879-c0d216dadf3c</a></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#./">Distributed Step Crate Example</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">mainEntity<span>&nbsp;</span><a href="http://schema.org/mainEntity">[?]</a></th>
+            <td style='text-align:left'><a href="#./">Distributed Step Crate Example</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/></div>
+</div>
+
+
+
+
+
+</body>
+</html>

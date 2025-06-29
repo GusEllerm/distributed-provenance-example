@@ -1,0 +1,13 @@
+def sort_txt(input_file: str, output_file: str, reverse: bool):
+    with open(input_file, 'r') as f:
+        lines = f.readlines()
+    lines = [line.strip() for line in lines]
+    lines = [line for line in lines if line]
+    lines.sort()
+    if reverse:
+        lines = lines[::-1]
+
+    from pathlib import Path
+    Path(output_file).parent.mkdir(parents=True, exist_ok=True)
+    with open(output_file, 'w') as f:
+        f.write('\n'.join(lines))

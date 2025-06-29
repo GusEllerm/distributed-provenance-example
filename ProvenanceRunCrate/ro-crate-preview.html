@@ -1,0 +1,1876 @@
+
+
+<html>
+<head>
+
+
+<script type="application/ld+json"> 
+  {
+  "@context": "https://w3id.org/ro/crate/1.1/context",
+  "@graph": [
+    {
+      "@id": "./",
+      "@type": "Dataset",
+      "name": "Example Provenance-Aware Globus Flows execution",
+      "description": "This RO-Crate contains a Globus Flows workflow execution that demonstrates the use of RO-Crate for provenance tracking in computational workflows.",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "datePublished": "2025-06-29T04:08:06+00:00",
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/wfrun/process/0.1"
+        },
+        {
+          "@id": "https://w3id.org/ro/wfrun/workflow/0.1"
+        },
+        {
+          "@id": "https://w3id.org/ro/wfrun/provenance/0.1"
+        },
+        {
+          "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0"
+        }
+      ],
+      "hasPart": [
+        {
+          "@id": "WEP.json"
+        },
+        {
+          "@id": "16938cab-126e-4707-b4c6-54da56fb629e"
+        },
+        {
+          "@id": "4ce5a46a-fa3c-4366-83a3-80e3abde640a"
+        },
+        {
+          "@id": "40bcc1d4-fbd3-4e4a-bd5a-970dff566164"
+        },
+        {
+          "@id": "e451c118-2e77-4e2a-b934-99b80cfe8471"
+        },
+        {
+          "@id": "e444ef40-6b12-452c-9978-a3e484b2484a"
+        },
+        {
+          "@id": "b74052a9-1a76-4f1e-b48a-e892fbadc1cb"
+        },
+        {
+          "@id": "3e1d8118-cf5d-4549-b0f4-41f831389205"
+        },
+        {
+          "@id": "9e547861-e3c3-4f26-8e7e-91c7c4a0a557"
+        },
+        {
+          "@id": "ffb16e21-03a1-4513-a098-88a75ca6e756"
+        },
+        {
+          "@id": "2753cdea-1429-4172-b0d5-c63e95b2ce6b"
+        }
+      ],
+      "mainEntity": {
+        "@id": "WEP.json"
+      },
+      "@reverse": {
+        "about": [
+          {
+            "@id": "ro-crate-metadata.json"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "about": {
+        "@id": "./"
+      },
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate/1.1"
+        },
+        {
+          "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0"
+        }
+      ]
+    },
+    {
+      "@id": "WEP.json",
+      "@type": [
+        "File",
+        "SoftwareSourceCode",
+        "ComputationalWorkflow",
+        "HowTo"
+      ],
+      "connection": [
+        {
+          "@id": "#74b88a92-a349-4d19-8d7e-a0f3ffbca1b5"
+        }
+      ],
+      "hasPart": [
+        {
+          "@id": "WEP.json#RevTxt"
+        },
+        {
+          "@id": "WEP.json#SortTxt"
+        }
+      ],
+      "input": [
+        {
+          "@id": "WEP.json#main#$.input.RevTxt.input_file"
+        },
+        {
+          "@id": "WEP.json#main#$.input.SortTxt.reverse"
+        }
+      ],
+      "name": "WEP.json",
+      "output": [
+        {
+          "@id": "WEP.json#main#$.input.SortTxt.output_file"
+        }
+      ],
+      "programmingLanguage": {
+        "@id": "https://w3id.org/workflowhub/workflow-ro-crate#globus"
+      },
+      "step": [
+        {
+          "@id": "WEP.json#main/RevTxt"
+        },
+        {
+          "@id": "WEP.json#main/SortTxt"
+        }
+      ],
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          }
+        ],
+        "mainEntity": [
+          {
+            "@id": "./"
+          }
+        ],
+        "instrument": [
+          {
+            "@id": "#029ecaff-4dec-4a11-a211-8a01c717f6e5"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "https://w3id.org/ro/wfrun/process/0.1",
+      "@type": "CreativeWork",
+      "name": "Process Run Crate",
+      "version": "0.1",
+      "@reverse": {
+        "conformsTo": [
+          {
+            "@id": "./"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "https://w3id.org/ro/wfrun/workflow/0.1",
+      "@type": "CreativeWork",
+      "name": "Workflow Run Crate",
+      "version": "0.1",
+      "@reverse": {
+        "conformsTo": [
+          {
+            "@id": "./"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "https://w3id.org/ro/wfrun/provenance/0.1",
+      "@type": "CreativeWork",
+      "name": "Provenance Run Crate",
+      "version": "0.1",
+      "@reverse": {
+        "conformsTo": [
+          {
+            "@id": "./"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0",
+      "@type": "CreativeWork",
+      "name": "Workflow RO-Crate",
+      "version": "1.0",
+      "@reverse": {
+        "conformsTo": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "ro-crate-metadata.json"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "WEP.json#main#$.input.RevTxt.input_file",
+      "@type": "FormalParameter",
+      "additionalType": "File",
+      "name": "main#$.input.RevTxt.input_file",
+      "@reverse": {
+        "input": [
+          {
+            "@id": "WEP.json"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "WEP.json#main#$.input.SortTxt.reverse",
+      "@type": "FormalParameter",
+      "additionalType": "File",
+      "name": "main#$.input.SortTxt.reverse",
+      "@reverse": {
+        "input": [
+          {
+            "@id": "WEP.json"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "WEP.json#main#$.input.SortTxt.output_file",
+      "@type": "FormalParameter",
+      "additionalType": "File",
+      "name": "main#$.input.SortTxt.output_file",
+      "@reverse": {
+        "output": [
+          {
+            "@id": "WEP.json"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#74b88a92-a349-4d19-8d7e-a0f3ffbca1b5",
+      "@type": "ParameterConnection",
+      "sourceParameter": {
+        "@id": "$.input.SortTxt.output_file"
+      },
+      "targetParameter": {
+        "@id": "main#$.input.SortTxt.output_file"
+      },
+      "@reverse": {
+        "connection": [
+          {
+            "@id": "WEP.json"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "WEP.json#main/RevTxt",
+      "@type": "HowToStep",
+      "connection": [
+        {
+          "@id": "#9e0cfcef-049e-4ac6-bd38-59c7bb6f5838"
+        }
+      ],
+      "position": "0",
+      "workExample": {
+        "@id": "WEP.json#RevTxt"
+      },
+      "@reverse": {
+        "step": [
+          {
+            "@id": "WEP.json"
+          }
+        ],
+        "instrument": [
+          {
+            "@id": "#de693afa-8e59-43e1-bfe5-4d9217f68d25"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#9e0cfcef-049e-4ac6-bd38-59c7bb6f5838",
+      "@type": "ParameterConnection",
+      "sourceParameter": {
+        "@id": "main#$.input.RevTxt.input_file"
+      },
+      "targetParameter": {
+        "@id": "$.input.RevTxt.input_file"
+      },
+      "@reverse": {
+        "connection": [
+          {
+            "@id": "WEP.json#main/RevTxt"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "WEP.json#RevTxt",
+      "@type": "SoftwareApplication",
+      "description": null,
+      "input": [
+        {
+          "@id": "WEP.json#$.input.RevTxt.input_file"
+        }
+      ],
+      "name": "RevTxt",
+      "output": [
+        {
+          "@id": "WEP.json#$.input.RevTxt.output_file"
+        }
+      ],
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "WEP.json"
+          }
+        ],
+        "workExample": [
+          {
+            "@id": "WEP.json#main/RevTxt"
+          }
+        ],
+        "instrument": [
+          {
+            "@id": "e444ef40-6b12-452c-9978-a3e484b2484a"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "WEP.json#$.input.RevTxt.input_file",
+      "@type": "FormalParameter",
+      "additionalType": "File",
+      "name": "$.input.RevTxt.input_file",
+      "@reverse": {
+        "input": [
+          {
+            "@id": "WEP.json#RevTxt"
+          }
+        ],
+        "exampleOfWork": [
+          {
+            "@id": "40bcc1d4-fbd3-4e4a-bd5a-970dff566164"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "WEP.json#$.input.RevTxt.output_file",
+      "@type": "FormalParameter",
+      "additionalType": "File",
+      "name": "$.input.RevTxt.output_file",
+      "@reverse": {
+        "output": [
+          {
+            "@id": "WEP.json#RevTxt"
+          }
+        ],
+        "exampleOfWork": [
+          {
+            "@id": "e451c118-2e77-4e2a-b934-99b80cfe8471"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "WEP.json#main/SortTxt",
+      "@type": "HowToStep",
+      "connection": [
+        {
+          "@id": "#a24083bd-88ac-4027-aa28-d6105d8755a7"
+        },
+        {
+          "@id": "#79158285-5162-4ef9-a44a-0a46ce4c17f1"
+        }
+      ],
+      "position": "1",
+      "workExample": {
+        "@id": "WEP.json#SortTxt"
+      },
+      "@reverse": {
+        "step": [
+          {
+            "@id": "WEP.json"
+          }
+        ],
+        "instrument": [
+          {
+            "@id": "#43c62869-0875-4c5a-a59d-8d75ad6a7da8"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#a24083bd-88ac-4027-aa28-d6105d8755a7",
+      "@type": "ParameterConnection",
+      "sourceParameter": {
+        "@id": "$.input.RevTxt.output_file"
+      },
+      "targetParameter": {
+        "@id": "$.input.SortTxt.input_file"
+      },
+      "@reverse": {
+        "connection": [
+          {
+            "@id": "WEP.json#main/SortTxt"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#79158285-5162-4ef9-a44a-0a46ce4c17f1",
+      "@type": "ParameterConnection",
+      "sourceParameter": {
+        "@id": "main#$.input.SortTxt.reverse"
+      },
+      "targetParameter": {
+        "@id": "$.input.SortTxt.reverse"
+      },
+      "@reverse": {
+        "connection": [
+          {
+            "@id": "WEP.json#main/SortTxt"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "WEP.json#SortTxt",
+      "@type": "SoftwareApplication",
+      "description": null,
+      "input": [
+        {
+          "@id": "WEP.json#$.input.SortTxt.input_file"
+        },
+        {
+          "@id": "WEP.json#$.input.SortTxt.reverse"
+        }
+      ],
+      "name": "SortTxt",
+      "output": [
+        {
+          "@id": "WEP.json#$.input.SortTxt.output_file"
+        }
+      ],
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "WEP.json"
+          }
+        ],
+        "workExample": [
+          {
+            "@id": "WEP.json#main/SortTxt"
+          }
+        ],
+        "instrument": [
+          {
+            "@id": "2753cdea-1429-4172-b0d5-c63e95b2ce6b"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "WEP.json#$.input.SortTxt.input_file",
+      "@type": "FormalParameter",
+      "additionalType": "File",
+      "name": "$.input.SortTxt.input_file",
+      "@reverse": {
+        "input": [
+          {
+            "@id": "WEP.json#SortTxt"
+          }
+        ],
+        "exampleOfWork": [
+          {
+            "@id": "9e547861-e3c3-4f26-8e7e-91c7c4a0a557"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "WEP.json#$.input.SortTxt.output_file",
+      "@type": "FormalParameter",
+      "additionalType": "File",
+      "name": "$.input.SortTxt.output_file",
+      "@reverse": {
+        "output": [
+          {
+            "@id": "WEP.json#SortTxt"
+          }
+        ],
+        "exampleOfWork": [
+          {
+            "@id": "ffb16e21-03a1-4513-a098-88a75ca6e756"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "WEP.json#$.input.SortTxt.reverse",
+      "@type": "FormalParameter",
+      "additionalType": "File",
+      "name": "$.input.SortTxt.reverse",
+      "@reverse": {
+        "input": [
+          {
+            "@id": "WEP.json#SortTxt"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#51db247c-b743-43fc-8589-80331ce39551",
+      "@type": "SoftwareApplication",
+      "applicationCategory": "WorkflowEngineApplication",
+      "description": "Globus Flows is a managed service for composing and running multi-step, reliable data flows in distributed systems.",
+      "identifier": "https://www.globus.org/flows",
+      "name": "Globus Flows",
+      "url": "https://www.globus.org/flows",
+      "@reverse": {
+        "instrument": [
+          {
+            "@id": "#fe3511f6-8785-43ae-8794-68dbc4445179"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#25af9d3b-aeb8-4f44-9c88-3264ad82a3ae",
+      "@type": "Person",
+      "email": "gus.ellerm@auckland.ac.nz",
+      "familyName": "Ellerm",
+      "givenName": "Augustus",
+      "@reverse": {
+        "agent": [
+          {
+            "@id": "#029ecaff-4dec-4a11-a211-8a01c717f6e5"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#029ecaff-4dec-4a11-a211-8a01c717f6e5",
+      "@type": "CreateAction",
+      "agent": {
+        "@id": "#25af9d3b-aeb8-4f44-9c88-3264ad82a3ae"
+      },
+      "endTime": "2025-06-26T23:50:16.752000+00:00",
+      "instrument": {
+        "@id": "WEP.json"
+      },
+      "name": "Workflow Execution",
+      "object": [
+        {
+          "@id": "40bcc1d4-fbd3-4e4a-bd5a-970dff566164"
+        }
+      ],
+      "result": [
+        {
+          "@id": "ffb16e21-03a1-4513-a098-88a75ca6e756"
+        }
+      ],
+      "startTime": "2025-06-26T23:39:05.417000+00:00",
+      "@reverse": {
+        "result": [
+          {
+            "@id": "#fe3511f6-8785-43ae-8794-68dbc4445179"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#43c62869-0875-4c5a-a59d-8d75ad6a7da8",
+      "@type": "ControlAction",
+      "instrument": {
+        "@id": "WEP.json#main/SortTxt"
+      },
+      "name": "Orchestrate step: SortTxt",
+      "object": {
+        "@id": "2753cdea-1429-4172-b0d5-c63e95b2ce6b"
+      },
+      "@reverse": {
+        "object": [
+          {
+            "@id": "#fe3511f6-8785-43ae-8794-68dbc4445179"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#de693afa-8e59-43e1-bfe5-4d9217f68d25",
+      "@type": "ControlAction",
+      "instrument": {
+        "@id": "WEP.json#main/RevTxt"
+      },
+      "name": "Orchestrate step: RevTxt",
+      "object": {
+        "@id": "e444ef40-6b12-452c-9978-a3e484b2484a"
+      },
+      "@reverse": {
+        "object": [
+          {
+            "@id": "#fe3511f6-8785-43ae-8794-68dbc4445179"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#fe3511f6-8785-43ae-8794-68dbc4445179",
+      "@type": "OrganizeAction",
+      "actionStatus": "CompletedActionStatus",
+      "instrument": {
+        "@id": "#51db247c-b743-43fc-8589-80331ce39551"
+      },
+      "name": "Globus Flows Run",
+      "object": [
+        {
+          "@id": "#43c62869-0875-4c5a-a59d-8d75ad6a7da8"
+        },
+        {
+          "@id": "#de693afa-8e59-43e1-bfe5-4d9217f68d25"
+        }
+      ],
+      "result": {
+        "@id": "#029ecaff-4dec-4a11-a211-8a01c717f6e5"
+      }
+    },
+    {
+      "@id": "#19d1a07a-96bf-4fda-8c17-ef512b9e0fbc",
+      "@type": "HardwareComponent",
+      "Address sizes": "40 bits physical, 48 bits virtual",
+      "Architecture": "x86_64",
+      "BogoMIPS": "5290.06",
+      "Byte Order": "Little Endian",
+      "CPU family": "25",
+      "CPU op-mode(s)": "32-bit, 64-bit",
+      "CPU(s)": "4",
+      "Core(s) per socket": "1",
+      "Flags": "fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext perfctr_core ssbd ibrs ibpb stibp vmmcall fsgsbase tsc_adjust bmi1 avx2 smep bmi2 rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr wbnoinvd arat npt nrip_save umip vaes vpclmulqdq rdpid arch_capabilities",
+      "Hypervisor vendor": "KVM",
+      "L1d cache": "128 KiB (4 instances)",
+      "L1i cache": "128 KiB (4 instances)",
+      "L2 cache": "2 MiB (4 instances)",
+      "L3 cache": "128 MiB (4 instances)",
+      "Model": "1",
+      "Model name": "AMD EPYC-Milan Processor",
+      "NUMA node(s)": "1",
+      "NUMA node0 CPU(s)": "0-3",
+      "On-line CPU(s) list": "0-3",
+      "Socket(s)": "4",
+      "Stepping": "1",
+      "Thread(s) per core": "1",
+      "Vendor ID": "AuthenticAMD",
+      "Virtualization": "AMD-V",
+      "Virtualization type": "full",
+      "Vulnerability Gather data sampling": "Not affected",
+      "Vulnerability Itlb multihit": "Not affected",
+      "Vulnerability L1tf": "Not affected",
+      "Vulnerability Mds": "Not affected",
+      "Vulnerability Meltdown": "Not affected",
+      "Vulnerability Mmio stale data": "Not affected",
+      "Vulnerability Retbleed": "Not affected",
+      "Vulnerability Spec rstack overflow": "Mitigation; safe RET, no microcode",
+      "Vulnerability Spec store bypass": "Mitigation; Speculative Store Bypass disabled via prctl and seccomp",
+      "Vulnerability Spectre v1": "Mitigation; usercopy/swapgs barriers and __user pointer sanitization",
+      "Vulnerability Spectre v2": "Mitigation; Retpolines, IBPB conditional, IBRS_FW, STIBP disabled, RSB filling, PBRSB-eIBRS Not affected",
+      "Vulnerability Srbds": "Not affected",
+      "Vulnerability Tsx async abort": "Not affected",
+      "description": "CPU properties as reported by lscpu",
+      "name": "CPU",
+      "performance": {
+        "@id": "#c76d20c0-a8a2-42e1-98ce-762f0cf64bd4"
+      },
+      "@reverse": {
+        "component": [
+          {
+            "@id": "#bcc0c0cd-ffde-4c77-b3df-8741c9452e75"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#c76d20c0-a8a2-42e1-98ce-762f0cf64bd4",
+      "@type": "Observation",
+      "name": "Observation",
+      "image": "16938cab-126e-4707-b4c6-54da56fb629e",
+      "maxValue": "0.0",
+      "measurementTechnique": "Psutil.cpu_percent polled at 0.05",
+      "minValue": "0.0",
+      "observationAbout": "#19d1a07a-96bf-4fda-8c17-ef512b9e0fbc",
+      "value": "4ce5a46a-fa3c-4366-83a3-80e3abde640a",
+      "@reverse": {
+        "performance": [
+          {
+            "@id": "#19d1a07a-96bf-4fda-8c17-ef512b9e0fbc"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#2901f5bd-3103-4d72-a3b6-4310ba80bf36",
+      "@type": "HardwareComponent",
+      "active": "3142991872",
+      "available": "6736965632",
+      "buffers": "147083264",
+      "cached": "6189883392",
+      "description": "RAM properties as reported by mem_info()",
+      "free": "725217280",
+      "inactive": "3844759552",
+      "name": "RAM",
+      "percent": "19.1",
+      "shared": "3461120",
+      "slab": "502702080",
+      "total": "8323014656",
+      "used": "1260830720",
+      "@reverse": {
+        "component": [
+          {
+            "@id": "#bcc0c0cd-ffde-4c77-b3df-8741c9452e75"
+          }
+        ]
+      }
+    },
+    {
+      "1K-blocks": "102626232",
+      "@id": "#5b5d0146-bd8b-4099-ba54-db6f2810878f",
+      "@type": "HardwareComponent",
+      "Available": "97364452",
+      "Filesystem": "/dev/vdb",
+      "Mounted": "/mnt/storage",
+      "Use%": "1%",
+      "Used": "2516",
+      "description": "Storage properties as reported by ds",
+      "name": "Storage",
+      "@reverse": {
+        "component": [
+          {
+            "@id": "#bcc0c0cd-ffde-4c77-b3df-8741c9452e75"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#bcc0c0cd-ffde-4c77-b3df-8741c9452e75",
+      "@type": "HardwareRuntime",
+      "name": "Hardware Runtime",
+      "component": [
+        {
+          "@id": "#19d1a07a-96bf-4fda-8c17-ef512b9e0fbc"
+        },
+        {
+          "@id": "#2901f5bd-3103-4d72-a3b6-4310ba80bf36"
+        },
+        {
+          "@id": "#5b5d0146-bd8b-4099-ba54-db6f2810878f"
+        }
+      ],
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "e444ef40-6b12-452c-9978-a3e484b2484a"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#ffe4fdeb-39a9-4a7a-9d74-382ea7bdad76",
+      "@type": "Organization",
+      "name": "The University of Auckland"
+    },
+    {
+      "@id": "16938cab-126e-4707-b4c6-54da56fb629e",
+      "@type": "File",
+      "encodingFormat": "image/png",
+      "name": "CPU usage",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "4ce5a46a-fa3c-4366-83a3-80e3abde640a",
+      "@type": "File",
+      "encodingFormat": "json",
+      "name": "CPU usage",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "40bcc1d4-fbd3-4e4a-bd5a-970dff566164",
+      "@type": "File",
+      "contentSize": 86091,
+      "encodingFormat": "text/plain",
+      "exampleOfWork": {
+        "@id": "WEP.json#$.input.RevTxt.input_file"
+      },
+      "name": "RevText input",
+      "source": "rev_text/input/test.txt",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          }
+        ],
+        "object": [
+          {
+            "@id": "#029ecaff-4dec-4a11-a211-8a01c717f6e5"
+          },
+          {
+            "@id": "e444ef40-6b12-452c-9978-a3e484b2484a"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "e451c118-2e77-4e2a-b934-99b80cfe8471",
+      "@type": "File",
+      "contentSize": 85547,
+      "encodingFormat": "text/plain",
+      "exampleOfWork": {
+        "@id": "WEP.json#$.input.RevTxt.output_file"
+      },
+      "name": "RevText output",
+      "source": "rev_text/output/test.txt",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          }
+        ],
+        "result": [
+          {
+            "@id": "e444ef40-6b12-452c-9978-a3e484b2484a"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "e444ef40-6b12-452c-9978-a3e484b2484a",
+      "@type": [
+        "CreateAction",
+        "ActionAccessSpecification",
+        "Schedule",
+        "File"
+      ],
+      "name": "Distriubted Step Crate",
+      "hasPart": {
+        "@id": "#bcc0c0cd-ffde-4c77-b3df-8741c9452e75"
+      },
+      "object": {
+        "@id": "40bcc1d4-fbd3-4e4a-bd5a-970dff566164"
+      },
+      "requiresSubscription": "False",
+      "result": {
+        "@id": "e451c118-2e77-4e2a-b934-99b80cfe8471"
+      },
+      "instrument": {
+        "@id": "WEP.json#RevTxt"
+      },
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          }
+        ],
+        "object": [
+          {
+            "@id": "#de693afa-8e59-43e1-bfe5-4d9217f68d25"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#403381b5-2242-4099-9589-a50d557eba80",
+      "@type": "HardwareComponent",
+      "Address sizes": "40 bits physical, 48 bits virtual",
+      "Architecture": "x86_64",
+      "BogoMIPS": "5290.06",
+      "Byte Order": "Little Endian",
+      "CPU family": "25",
+      "CPU op-mode(s)": "32-bit, 64-bit",
+      "CPU(s)": "4",
+      "Core(s) per socket": "1",
+      "Flags": "fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext perfctr_core ssbd ibrs ibpb stibp vmmcall fsgsbase tsc_adjust bmi1 avx2 smep bmi2 rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr wbnoinvd arat npt nrip_save umip vaes vpclmulqdq rdpid arch_capabilities",
+      "Hypervisor vendor": "KVM",
+      "L1d cache": "128 KiB (4 instances)",
+      "L1i cache": "128 KiB (4 instances)",
+      "L2 cache": "2 MiB (4 instances)",
+      "L3 cache": "128 MiB (4 instances)",
+      "Model": "1",
+      "Model name": "AMD EPYC-Milan Processor",
+      "NUMA node(s)": "1",
+      "NUMA node0 CPU(s)": "0-3",
+      "On-line CPU(s) list": "0-3",
+      "Socket(s)": "4",
+      "Stepping": "1",
+      "Thread(s) per core": "1",
+      "Vendor ID": "AuthenticAMD",
+      "Virtualization": "AMD-V",
+      "Virtualization type": "full",
+      "Vulnerability Gather data sampling": "Not affected",
+      "Vulnerability Itlb multihit": "Not affected",
+      "Vulnerability L1tf": "Not affected",
+      "Vulnerability Mds": "Not affected",
+      "Vulnerability Meltdown": "Not affected",
+      "Vulnerability Mmio stale data": "Not affected",
+      "Vulnerability Retbleed": "Not affected",
+      "Vulnerability Spec rstack overflow": "Mitigation; safe RET, no microcode",
+      "Vulnerability Spec store bypass": "Mitigation; Speculative Store Bypass disabled via prctl and seccomp",
+      "Vulnerability Spectre v1": "Mitigation; usercopy/swapgs barriers and __user pointer sanitization",
+      "Vulnerability Spectre v2": "Mitigation; Retpolines, IBPB conditional, IBRS_FW, STIBP disabled, RSB filling, PBRSB-eIBRS Not affected",
+      "Vulnerability Srbds": "Not affected",
+      "Vulnerability Tsx async abort": "Not affected",
+      "description": "CPU properties as reported by lscpu",
+      "name": "CPU",
+      "performance": {
+        "@id": "#4478968e-caaa-49a6-b614-8600e5e7603c"
+      },
+      "@reverse": {
+        "components": [
+          {
+            "@id": "#b8a80195-f749-40c0-96a8-78f0db612cf2"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#4478968e-caaa-49a6-b614-8600e5e7603c",
+      "@type": "Observation",
+      "name": "Observation",
+      "image": "b74052a9-1a76-4f1e-b48a-e892fbadc1cb",
+      "maxValue": "0.0",
+      "measurementTechnique": "Psutil.cpu_percent polled at 0.05",
+      "minValue": "0.0",
+      "observationAbout": "#403381b5-2242-4099-9589-a50d557eba80",
+      "value": "3e1d8118-cf5d-4549-b0f4-41f831389205",
+      "@reverse": {
+        "performance": [
+          {
+            "@id": "#403381b5-2242-4099-9589-a50d557eba80"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#b7aa95e9-9006-42e0-b8d1-d4868ea1a431",
+      "@type": "HardwareComponent",
+      "active": "2909184000",
+      "available": "6746652672",
+      "buffers": "101249024",
+      "cached": "5645135872",
+      "description": "RAM properties as reported by mem_info()",
+      "free": "1325527040",
+      "inactive": "3493847040",
+      "name": "RAM",
+      "percent": "18.9",
+      "shared": "3493888",
+      "slab": "503271424",
+      "total": "8323014656",
+      "used": "1251102720",
+      "@reverse": {
+        "components": [
+          {
+            "@id": "#b8a80195-f749-40c0-96a8-78f0db612cf2"
+          }
+        ]
+      }
+    },
+    {
+      "1K-blocks": "102626232",
+      "@id": "#64f34f14-bf18-4890-9ae6-78d2605ee757",
+      "@type": "HardwareComponent",
+      "Available": "97364356",
+      "Filesystem": "/dev/vdb",
+      "Mounted": "/mnt/storage",
+      "Use%": "1%",
+      "Used": "2612",
+      "description": "Storage properties as reported by ds",
+      "name": "Storage",
+      "@reverse": {
+        "components": [
+          {
+            "@id": "#b8a80195-f749-40c0-96a8-78f0db612cf2"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#b8a80195-f749-40c0-96a8-78f0db612cf2",
+      "@type": "HardwareRuntime",
+      "name": "Hardware Runtime",
+      "components": [
+        {
+          "@id": "#403381b5-2242-4099-9589-a50d557eba80"
+        },
+        {
+          "@id": "#b7aa95e9-9006-42e0-b8d1-d4868ea1a431"
+        },
+        {
+          "@id": "#64f34f14-bf18-4890-9ae6-78d2605ee757"
+        }
+      ],
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "2753cdea-1429-4172-b0d5-c63e95b2ce6b"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#32d51d3a-26dd-4372-a970-28708be587fd",
+      "@type": "Organization",
+      "name": "The University of Auckland"
+    },
+    {
+      "@id": "b74052a9-1a76-4f1e-b48a-e892fbadc1cb",
+      "@type": "File",
+      "encodingFormat": "image/png",
+      "name": "CPU usage",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "3e1d8118-cf5d-4549-b0f4-41f831389205",
+      "@type": "File",
+      "encodingFormat": "json",
+      "name": "CPU usage",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "9e547861-e3c3-4f26-8e7e-91c7c4a0a557",
+      "@type": "File",
+      "contentSize": 85547,
+      "encodingFormat": "text/plain",
+      "exampleOfWork": {
+        "@id": "WEP.json#$.input.SortTxt.input_file"
+      },
+      "name": "sort_text input",
+      "source": "sort_text/input/test.txt",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          }
+        ],
+        "object": [
+          {
+            "@id": "2753cdea-1429-4172-b0d5-c63e95b2ce6b"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "ffb16e21-03a1-4513-a098-88a75ca6e756",
+      "@type": "File",
+      "contentSize": 85547,
+      "encodingFormat": "text/plain",
+      "exampleOfWork": {
+        "@id": "WEP.json#$.input.SortTxt.output_file"
+      },
+      "name": "sort_text output",
+      "source": "sort_text/output/test.txt",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          }
+        ],
+        "result": [
+          {
+            "@id": "#029ecaff-4dec-4a11-a211-8a01c717f6e5"
+          },
+          {
+            "@id": "2753cdea-1429-4172-b0d5-c63e95b2ce6b"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "2753cdea-1429-4172-b0d5-c63e95b2ce6b",
+      "@type": [
+        "CreateAction",
+        "ActionAccessSpecification",
+        "Schedule",
+        "File"
+      ],
+      "name": "Distriubted Step Crate",
+      "hasPart": {
+        "@id": "#b8a80195-f749-40c0-96a8-78f0db612cf2"
+      },
+      "object": {
+        "@id": "9e547861-e3c3-4f26-8e7e-91c7c4a0a557"
+      },
+      "requiresSubscription": "False",
+      "result": {
+        "@id": "ffb16e21-03a1-4513-a098-88a75ca6e756"
+      },
+      "instrument": {
+        "@id": "WEP.json#SortTxt"
+      },
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          }
+        ],
+        "object": [
+          {
+            "@id": "#43c62869-0875-4c5a-a59d-8d75ad6a7da8"
+          }
+        ]
+      }
+    }
+  ]
+}
+</script>
+
+    
+<!-- script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script -->
+<script src="https://unpkg.com/ro-crate-html-js/dist/ro-crate-dynamic.js"></script>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<meta charset='utf-8'/>
+<style>
+
+table.table {
+  padding-bottom: 300px;
+}
+</style>
+</head>
+
+
+<body>
+
+  <nav class="navbar">
+
+    <ul class="nav navbar-nav" >
+        <li ><a href="#"><span class="glyphicon glyphicon-home dataset_name">&nbsp;Example Provenance-Aware Globus Flows execution</span></a></li>
+    </ul>
+
+  </nav>
+<div class="container">
+<div class="jumbotron">
+<h4 class="citation"></h3>
+<h3 class="item_name">Example Provenance-Aware Globus Flows execution</h4>
+
+
+<a href="./ro-crate-metadata.json">⬇️🏷️ Download all the metadata for <span class='name'>Example Provenance-Aware Globus Flows execution</span> in JSON-LD format</a>
+
+
+<div id="check"></div>
+
+
+</div>
+
+
+
+<div id="summary">
+<div class='all-meta'>
+           <div>
+            <h3> Example Provenance-Aware Globus Flows execution</h3>
+            
+            
+            
+            
+        <div id="./">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>./</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>Example Provenance-Aware Globus Flows execution</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Dataset</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">description<span>&nbsp;</span><a href="http://schema.org/description">[?]</a></th>
+            <td style='text-align:left'><span>This RO-Crate contains a Globus Flows workflow execution that demonstrates the use of RO-Crate for provenance tracking in computational workflows.</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">datePublished<span>&nbsp;</span><a href="http://schema.org/datePublished">[?]</a></th>
+            <td style='text-align:left'><span>2025-06-29T04:08:06+00:00</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">license<span>&nbsp;</span><a href="http://schema.org/license">[?]</a></th>
+            <td style='text-align:left'><a href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">conformsTo<span>&nbsp;</span><a href="http://purl.org/dc/terms/conformsTo">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#https%3A//w3id.org/ro/wfrun/process/0.1">Process Run Crate</a></li>
+                        
+                        <li><a href="#https%3A//w3id.org/ro/wfrun/workflow/0.1">Workflow Run Crate</a></li>
+                        
+                        <li><a href="#https%3A//w3id.org/ro/wfrun/provenance/0.1">Provenance Run Crate</a></li>
+                        
+                        <li><a href="#https%3A//w3id.org/workflowhub/workflow-ro-crate/1.0">Workflow RO-Crate</a></li>
+                        </ul></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#WEP.json">WEP.json</a></li>
+                        
+                        <li><a href="#16938cab-126e-4707-b4c6-54da56fb629e">CPU usage</a></li>
+                        
+                        <li><a href="#4ce5a46a-fa3c-4366-83a3-80e3abde640a">CPU usage</a></li>
+                        
+                        <li><a href="#40bcc1d4-fbd3-4e4a-bd5a-970dff566164">RevText input</a></li>
+                        
+                        <li><a href="#e451c118-2e77-4e2a-b934-99b80cfe8471">RevText output</a></li>
+                        
+                        <li><a href="#e444ef40-6b12-452c-9978-a3e484b2484a">Distriubted Step Crate</a></li>
+                        
+                        <li><a href="#b74052a9-1a76-4f1e-b48a-e892fbadc1cb">CPU usage</a></li>
+                        
+                        <li><a href="#3e1d8118-cf5d-4549-b0f4-41f831389205">CPU usage</a></li>
+                        
+                        <li><a href="#9e547861-e3c3-4f26-8e7e-91c7c4a0a557">sort_text input</a></li>
+                        
+                        <li><a href="#ffb16e21-03a1-4513-a098-88a75ca6e756">sort_text output</a></li>
+                        
+                        <li><a href="#2753cdea-1429-4172-b0d5-c63e95b2ce6b">Distriubted Step Crate</a></li>
+                        </ul></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">mainEntity<span>&nbsp;</span><a href="http://schema.org/mainEntity">[?]</a></th>
+            <td style='text-align:left'><a href="#WEP.json">WEP.json</a></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">about<span>&nbsp;</span><a href="http://schema.org/about">[?]</a></th>
+            <td style='text-align:left'><a href="#ro-crate-metadata.json">ro-crate-metadata.json</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="https://w3id.org/ro/wfrun/process/0.1">Go to: </a> Process Run Crate</h3>
+            
+            
+            
+            
+        <div id="https://w3id.org/ro/wfrun/process/0.1">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><a href="https://w3id.org/ro/wfrun/process/0.1">https://w3id.org/ro/wfrun/process/0.1</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>Process Run Crate</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>CreativeWork</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">version<span>&nbsp;</span><a href="http://schema.org/version">[?]</a></th>
+            <td style='text-align:left'><span>0.1</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">conformsTo<span>&nbsp;</span><a href="http://purl.org/dc/terms/conformsTo">[?]</a></th>
+            <td style='text-align:left'><a href="#./">Example Provenance-Aware Globus Flows execution</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="https://w3id.org/ro/wfrun/workflow/0.1">Go to: </a> Workflow Run Crate</h3>
+            
+            
+            
+            
+        <div id="https://w3id.org/ro/wfrun/workflow/0.1">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><a href="https://w3id.org/ro/wfrun/workflow/0.1">https://w3id.org/ro/wfrun/workflow/0.1</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>Workflow Run Crate</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>CreativeWork</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">version<span>&nbsp;</span><a href="http://schema.org/version">[?]</a></th>
+            <td style='text-align:left'><span>0.1</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">conformsTo<span>&nbsp;</span><a href="http://purl.org/dc/terms/conformsTo">[?]</a></th>
+            <td style='text-align:left'><a href="#./">Example Provenance-Aware Globus Flows execution</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="https://w3id.org/ro/wfrun/provenance/0.1">Go to: </a> Provenance Run Crate</h3>
+            
+            
+            
+            
+        <div id="https://w3id.org/ro/wfrun/provenance/0.1">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><a href="https://w3id.org/ro/wfrun/provenance/0.1">https://w3id.org/ro/wfrun/provenance/0.1</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>Provenance Run Crate</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>CreativeWork</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">version<span>&nbsp;</span><a href="http://schema.org/version">[?]</a></th>
+            <td style='text-align:left'><span>0.1</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">conformsTo<span>&nbsp;</span><a href="http://purl.org/dc/terms/conformsTo">[?]</a></th>
+            <td style='text-align:left'><a href="#./">Example Provenance-Aware Globus Flows execution</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="https://w3id.org/workflowhub/workflow-ro-crate/1.0">Go to: </a> Workflow RO-Crate</h3>
+            
+            
+            
+            
+        <div id="https://w3id.org/workflowhub/workflow-ro-crate/1.0">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><a href="https://w3id.org/workflowhub/workflow-ro-crate/1.0">https://w3id.org/workflowhub/workflow-ro-crate/1.0</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>Workflow RO-Crate</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>CreativeWork</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">version<span>&nbsp;</span><a href="http://schema.org/version">[?]</a></th>
+            <td style='text-align:left'><span>1.0</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">conformsTo<span>&nbsp;</span><a href="http://purl.org/dc/terms/conformsTo">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">Example Provenance-Aware Globus Flows execution</a></li>
+                        
+                        <li><a href="#ro-crate-metadata.json">ro-crate-metadata.json</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="WEP.json">⬇️ Download: </a> WEP.json</h3>
+            
+            
+            
+            
+        <div id="WEP.json">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>WEP.json</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>WEP.json</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><ul>
+                        <li><span>File</span></li>
+                        
+                        <li><span>SoftwareSourceCode</span></li>
+                        
+                        <li><span>ComputationalWorkflow</span></li>
+                        
+                        <li><span>HowTo</span></li>
+                        </ul></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">connection</th>
+            <td style='text-align:left'><a href="#%2374b88a92-a349-4d19-8d7e-a0f3ffbca1b5">#74b88a92-a349-4d19-8d7e-a0f3ffbca1b5</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#WEP.json%23RevTxt">RevTxt</a></li>
+                        
+                        <li><a href="#WEP.json%23SortTxt">SortTxt</a></li>
+                        </ul></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">input<span>&nbsp;</span><a href="https://bioschemas.org/ComputationalWorkflow#input">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#WEP.json%23main%23%24.input.RevTxt.input_file">main#$.input.RevTxt.input_file</a></li>
+                        
+                        <li><a href="#WEP.json%23main%23%24.input.SortTxt.reverse">main#$.input.SortTxt.reverse</a></li>
+                        </ul></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">output<span>&nbsp;</span><a href="https://bioschemas.org/ComputationalWorkflow#output">[?]</a></th>
+            <td style='text-align:left'><a href="#WEP.json%23main%23%24.input.SortTxt.output_file">main#$.input.SortTxt.output_file</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">programmingLanguage<span>&nbsp;</span><a href="http://schema.org/programmingLanguage">[?]</a></th>
+            <td style='text-align:left'><a href="https://w3id.org/workflowhub/workflow-ro-crate#globus">https://w3id.org/workflowhub/workflow-ro-crate#globus</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">step<span>&nbsp;</span><a href="http://schema.org/step">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#WEP.json%23main/RevTxt">WEP.json#main/RevTxt</a></li>
+                        
+                        <li><a href="#WEP.json%23main/SortTxt">WEP.json#main/SortTxt</a></li>
+                        </ul></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#./">Example Provenance-Aware Globus Flows execution</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">mainEntity<span>&nbsp;</span><a href="http://schema.org/mainEntity">[?]</a></th>
+            <td style='text-align:left'><a href="#./">Example Provenance-Aware Globus Flows execution</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">instrument<span>&nbsp;</span><a href="http://schema.org/instrument">[?]</a></th>
+            <td style='text-align:left'><a href="#%23029ecaff-4dec-4a11-a211-8a01c717f6e5">Workflow Execution</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="16938cab-126e-4707-b4c6-54da56fb629e">⬇️ Download: </a> CPU usage</h3>
+            
+            
+            
+            
+        <div id="16938cab-126e-4707-b4c6-54da56fb629e">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>16938cab-126e-4707-b4c6-54da56fb629e</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>CPU usage</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">encodingFormat<span>&nbsp;</span><a href="http://schema.org/encodingFormat">[?]</a></th>
+            <td style='text-align:left'><span>image/png</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#./">Example Provenance-Aware Globus Flows execution</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="4ce5a46a-fa3c-4366-83a3-80e3abde640a">⬇️ Download: </a> CPU usage</h3>
+            
+            
+            
+            
+        <div id="4ce5a46a-fa3c-4366-83a3-80e3abde640a">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>4ce5a46a-fa3c-4366-83a3-80e3abde640a</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>CPU usage</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">encodingFormat<span>&nbsp;</span><a href="http://schema.org/encodingFormat">[?]</a></th>
+            <td style='text-align:left'><span>json</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#./">Example Provenance-Aware Globus Flows execution</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="40bcc1d4-fbd3-4e4a-bd5a-970dff566164">⬇️ Download: </a> RevText input</h3>
+            
+            
+            
+            
+        <div id="40bcc1d4-fbd3-4e4a-bd5a-970dff566164">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>40bcc1d4-fbd3-4e4a-bd5a-970dff566164</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>RevText input</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">encodingFormat<span>&nbsp;</span><a href="http://schema.org/encodingFormat">[?]</a></th>
+            <td style='text-align:left'><span>text/plain</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">contentSize<span>&nbsp;</span><a href="http://schema.org/contentSize">[?]</a></th>
+            <td style='text-align:left'><span>86091</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">exampleOfWork<span>&nbsp;</span><a href="http://schema.org/exampleOfWork">[?]</a></th>
+            <td style='text-align:left'><a href="#WEP.json%23%24.input.RevTxt.input_file">$.input.RevTxt.input_file</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">source</th>
+            <td style='text-align:left'><span>rev_text/input/test.txt</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#./">Example Provenance-Aware Globus Flows execution</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">object<span>&nbsp;</span><a href="http://schema.org/object">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#%23029ecaff-4dec-4a11-a211-8a01c717f6e5">Workflow Execution</a></li>
+                        
+                        <li><a href="#e444ef40-6b12-452c-9978-a3e484b2484a">Distriubted Step Crate</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="e451c118-2e77-4e2a-b934-99b80cfe8471">⬇️ Download: </a> RevText output</h3>
+            
+            
+            
+            
+        <div id="e451c118-2e77-4e2a-b934-99b80cfe8471">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>e451c118-2e77-4e2a-b934-99b80cfe8471</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>RevText output</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">encodingFormat<span>&nbsp;</span><a href="http://schema.org/encodingFormat">[?]</a></th>
+            <td style='text-align:left'><span>text/plain</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">contentSize<span>&nbsp;</span><a href="http://schema.org/contentSize">[?]</a></th>
+            <td style='text-align:left'><span>85547</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">exampleOfWork<span>&nbsp;</span><a href="http://schema.org/exampleOfWork">[?]</a></th>
+            <td style='text-align:left'><a href="#WEP.json%23%24.input.RevTxt.output_file">$.input.RevTxt.output_file</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">source</th>
+            <td style='text-align:left'><span>rev_text/output/test.txt</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#./">Example Provenance-Aware Globus Flows execution</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">result<span>&nbsp;</span><a href="http://schema.org/result">[?]</a></th>
+            <td style='text-align:left'><a href="#e444ef40-6b12-452c-9978-a3e484b2484a">Distriubted Step Crate</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="e444ef40-6b12-452c-9978-a3e484b2484a">⬇️ Download: </a> Distriubted Step Crate</h3>
+            
+            
+            
+            
+        <div id="e444ef40-6b12-452c-9978-a3e484b2484a">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>e444ef40-6b12-452c-9978-a3e484b2484a</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>Distriubted Step Crate</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><ul>
+                        <li><span>CreateAction</span></li>
+                        
+                        <li><span>ActionAccessSpecification</span></li>
+                        
+                        <li><span>Schedule</span></li>
+                        
+                        <li><span>File</span></li>
+                        </ul></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#%23bcc0c0cd-ffde-4c77-b3df-8741c9452e75">Hardware Runtime</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">object<span>&nbsp;</span><a href="http://schema.org/object">[?]</a></th>
+            <td style='text-align:left'><a href="#40bcc1d4-fbd3-4e4a-bd5a-970dff566164">RevText input</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">requiresSubscription<span>&nbsp;</span><a href="http://schema.org/requiresSubscription">[?]</a></th>
+            <td style='text-align:left'><span>False</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">result<span>&nbsp;</span><a href="http://schema.org/result">[?]</a></th>
+            <td style='text-align:left'><a href="#e451c118-2e77-4e2a-b934-99b80cfe8471">RevText output</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">instrument<span>&nbsp;</span><a href="http://schema.org/instrument">[?]</a></th>
+            <td style='text-align:left'><a href="#WEP.json%23RevTxt">RevTxt</a></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#./">Example Provenance-Aware Globus Flows execution</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">object<span>&nbsp;</span><a href="http://schema.org/object">[?]</a></th>
+            <td style='text-align:left'><a href="#%23de693afa-8e59-43e1-bfe5-4d9217f68d25">Orchestrate step: RevTxt</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="b74052a9-1a76-4f1e-b48a-e892fbadc1cb">⬇️ Download: </a> CPU usage</h3>
+            
+            
+            
+            
+        <div id="b74052a9-1a76-4f1e-b48a-e892fbadc1cb">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>b74052a9-1a76-4f1e-b48a-e892fbadc1cb</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>CPU usage</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">encodingFormat<span>&nbsp;</span><a href="http://schema.org/encodingFormat">[?]</a></th>
+            <td style='text-align:left'><span>image/png</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#./">Example Provenance-Aware Globus Flows execution</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="3e1d8118-cf5d-4549-b0f4-41f831389205">⬇️ Download: </a> CPU usage</h3>
+            
+            
+            
+            
+        <div id="3e1d8118-cf5d-4549-b0f4-41f831389205">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>3e1d8118-cf5d-4549-b0f4-41f831389205</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>CPU usage</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">encodingFormat<span>&nbsp;</span><a href="http://schema.org/encodingFormat">[?]</a></th>
+            <td style='text-align:left'><span>json</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#./">Example Provenance-Aware Globus Flows execution</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="9e547861-e3c3-4f26-8e7e-91c7c4a0a557">⬇️ Download: </a> sort_text input</h3>
+            
+            
+            
+            
+        <div id="9e547861-e3c3-4f26-8e7e-91c7c4a0a557">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>9e547861-e3c3-4f26-8e7e-91c7c4a0a557</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>sort_text input</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">encodingFormat<span>&nbsp;</span><a href="http://schema.org/encodingFormat">[?]</a></th>
+            <td style='text-align:left'><span>text/plain</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">contentSize<span>&nbsp;</span><a href="http://schema.org/contentSize">[?]</a></th>
+            <td style='text-align:left'><span>85547</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">exampleOfWork<span>&nbsp;</span><a href="http://schema.org/exampleOfWork">[?]</a></th>
+            <td style='text-align:left'><a href="#WEP.json%23%24.input.SortTxt.input_file">$.input.SortTxt.input_file</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">source</th>
+            <td style='text-align:left'><span>sort_text/input/test.txt</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#./">Example Provenance-Aware Globus Flows execution</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">object<span>&nbsp;</span><a href="http://schema.org/object">[?]</a></th>
+            <td style='text-align:left'><a href="#2753cdea-1429-4172-b0d5-c63e95b2ce6b">Distriubted Step Crate</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="ffb16e21-03a1-4513-a098-88a75ca6e756">⬇️ Download: </a> sort_text output</h3>
+            
+            
+            
+            
+        <div id="ffb16e21-03a1-4513-a098-88a75ca6e756">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>ffb16e21-03a1-4513-a098-88a75ca6e756</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>sort_text output</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">encodingFormat<span>&nbsp;</span><a href="http://schema.org/encodingFormat">[?]</a></th>
+            <td style='text-align:left'><span>text/plain</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">contentSize<span>&nbsp;</span><a href="http://schema.org/contentSize">[?]</a></th>
+            <td style='text-align:left'><span>85547</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">exampleOfWork<span>&nbsp;</span><a href="http://schema.org/exampleOfWork">[?]</a></th>
+            <td style='text-align:left'><a href="#WEP.json%23%24.input.SortTxt.output_file">$.input.SortTxt.output_file</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">source</th>
+            <td style='text-align:left'><span>sort_text/output/test.txt</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#./">Example Provenance-Aware Globus Flows execution</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">result<span>&nbsp;</span><a href="http://schema.org/result">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#%23029ecaff-4dec-4a11-a211-8a01c717f6e5">Workflow Execution</a></li>
+                        
+                        <li><a href="#2753cdea-1429-4172-b0d5-c63e95b2ce6b">Distriubted Step Crate</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="2753cdea-1429-4172-b0d5-c63e95b2ce6b">⬇️ Download: </a> Distriubted Step Crate</h3>
+            
+            
+            
+            
+        <div id="2753cdea-1429-4172-b0d5-c63e95b2ce6b">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>2753cdea-1429-4172-b0d5-c63e95b2ce6b</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>Distriubted Step Crate</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><ul>
+                        <li><span>CreateAction</span></li>
+                        
+                        <li><span>ActionAccessSpecification</span></li>
+                        
+                        <li><span>Schedule</span></li>
+                        
+                        <li><span>File</span></li>
+                        </ul></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#%23b8a80195-f749-40c0-96a8-78f0db612cf2">Hardware Runtime</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">object<span>&nbsp;</span><a href="http://schema.org/object">[?]</a></th>
+            <td style='text-align:left'><a href="#9e547861-e3c3-4f26-8e7e-91c7c4a0a557">sort_text input</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">requiresSubscription<span>&nbsp;</span><a href="http://schema.org/requiresSubscription">[?]</a></th>
+            <td style='text-align:left'><span>False</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">result<span>&nbsp;</span><a href="http://schema.org/result">[?]</a></th>
+            <td style='text-align:left'><a href="#ffb16e21-03a1-4513-a098-88a75ca6e756">sort_text output</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">instrument<span>&nbsp;</span><a href="http://schema.org/instrument">[?]</a></th>
+            <td style='text-align:left'><a href="#WEP.json%23SortTxt">SortTxt</a></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#./">Example Provenance-Aware Globus Flows execution</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">object<span>&nbsp;</span><a href="http://schema.org/object">[?]</a></th>
+            <td style='text-align:left'><a href="#%2343c62869-0875-4c5a-a59d-8d75ad6a7da8">Orchestrate step: SortTxt</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/></div>
+</div>
+
+
+
+
+
+</body>
+</html>

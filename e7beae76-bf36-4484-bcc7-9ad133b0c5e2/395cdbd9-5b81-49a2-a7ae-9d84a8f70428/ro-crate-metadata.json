@@ -1,0 +1,216 @@
+{
+    "@context": "https://w3id.org/ro/crate/1.1/context",
+    "@graph": [
+        {
+            "@id": "./",
+            "@type": "Dataset",
+            "name": "Distributed Step Crate Example",
+            "description": "An example of a distributed step crate generated during a Globus Flows workflow run.",
+            "license": "https://creativecommons.org/licenses/by/4.0/",
+            "datePublished": "2025-06-26T23:40:01+00:00",
+            "hasPart": [
+                {
+                    "@id": "16938cab-126e-4707-b4c6-54da56fb629e"
+                },
+                {
+                    "@id": "4ce5a46a-fa3c-4366-83a3-80e3abde640a"
+                },
+                {
+                    "@id": "40bcc1d4-fbd3-4e4a-bd5a-970dff566164"
+                },
+                {
+                    "@id": "e451c118-2e77-4e2a-b934-99b80cfe8471"
+                },
+                {
+                    "@id": "e444ef40-6b12-452c-9978-a3e484b2484a"
+                }
+            ],
+            "mainEntity": {
+                "@id": "e444ef40-6b12-452c-9978-a3e484b2484a"
+            }
+        },
+        {
+            "@id": "ro-crate-metadata.json",
+            "@type": "CreativeWork",
+            "about": {
+                "@id": "./"
+            },
+            "conformsTo": {
+                "@id": "https://w3id.org/ro/crate/1.1"
+            }
+        },
+        {
+            "@id": "16938cab-126e-4707-b4c6-54da56fb629e",
+            "@type": "File",
+            "encodingFormat": "image/png",
+            "name": "CPU usage"
+        },
+        {
+            "@id": "4ce5a46a-fa3c-4366-83a3-80e3abde640a",
+            "@type": "File",
+            "encodingFormat": "json",
+            "name": "CPU usage"
+        },
+        {
+            "@id": "e444ef40-6b12-452c-9978-a3e484b2484a",
+            "name": "Distributed Step Crate",
+            "@type": [
+                "CreateAction",
+                "HowTo",
+                "ActionAccessSpecification",
+                "Schedule",
+                "File"
+            ],
+            "hasPart": {
+                "@id": "#bcc0c0cd-ffde-4c77-b3df-8741c9452e75"
+            },
+            "object": {
+                "@id": "40bcc1d4-fbd3-4e4a-bd5a-970dff566164"
+            },
+            "requiresSubscription": "False",
+            "result": {
+                "@id": "e451c118-2e77-4e2a-b934-99b80cfe8471"
+            },
+            "step": {
+                "@id": "#23ac5690-431e-4ea6-a879-c0d216dadf3c"
+            }
+        },
+        {
+            "@id": "#23ac5690-431e-4ea6-a879-c0d216dadf3c",
+            "@type": "HowToStep",
+            "position": "395cdbd9-5b81-49a2-a7ae-9d84a8f70428",
+            "sourceOrganization": {
+                "@id": "#ffe4fdeb-39a9-4a7a-9d74-382ea7bdad76"
+            }
+        },
+        {
+            "@id": "#19d1a07a-96bf-4fda-8c17-ef512b9e0fbc",
+            "@type": "HardwareComponent",
+            "Address sizes": "40 bits physical, 48 bits virtual",
+            "Architecture": "x86_64",
+            "BogoMIPS": "5290.06",
+            "Byte Order": "Little Endian",
+            "CPU family": "25",
+            "CPU op-mode(s)": "32-bit, 64-bit",
+            "CPU(s)": "4",
+            "Core(s) per socket": "1",
+            "Flags": "fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext perfctr_core ssbd ibrs ibpb stibp vmmcall fsgsbase tsc_adjust bmi1 avx2 smep bmi2 rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr wbnoinvd arat npt nrip_save umip vaes vpclmulqdq rdpid arch_capabilities",
+            "Hypervisor vendor": "KVM",
+            "L1d cache": "128 KiB (4 instances)",
+            "L1i cache": "128 KiB (4 instances)",
+            "L2 cache": "2 MiB (4 instances)",
+            "L3 cache": "128 MiB (4 instances)",
+            "Model": "1",
+            "Model name": "AMD EPYC-Milan Processor",
+            "NUMA node(s)": "1",
+            "NUMA node0 CPU(s)": "0-3",
+            "On-line CPU(s) list": "0-3",
+            "Socket(s)": "4",
+            "Stepping": "1",
+            "Thread(s) per core": "1",
+            "Vendor ID": "AuthenticAMD",
+            "Virtualization": "AMD-V",
+            "Virtualization type": "full",
+            "Vulnerability Gather data sampling": "Not affected",
+            "Vulnerability Itlb multihit": "Not affected",
+            "Vulnerability L1tf": "Not affected",
+            "Vulnerability Mds": "Not affected",
+            "Vulnerability Meltdown": "Not affected",
+            "Vulnerability Mmio stale data": "Not affected",
+            "Vulnerability Retbleed": "Not affected",
+            "Vulnerability Spec rstack overflow": "Mitigation; safe RET, no microcode",
+            "Vulnerability Spec store bypass": "Mitigation; Speculative Store Bypass disabled via prctl and seccomp",
+            "Vulnerability Spectre v1": "Mitigation; usercopy/swapgs barriers and __user pointer sanitization",
+            "Vulnerability Spectre v2": "Mitigation; Retpolines, IBPB conditional, IBRS_FW, STIBP disabled, RSB filling, PBRSB-eIBRS Not affected",
+            "Vulnerability Srbds": "Not affected",
+            "Vulnerability Tsx async abort": "Not affected",
+            "description": "CPU properties as reported by lscpu",
+            "name": "CPU",
+            "performance": 
+                {
+                    "@id": "#c76d20c0-a8a2-42e1-98ce-762f0cf64bd4"
+                }
+            
+        },
+        {
+            "@id": "#c76d20c0-a8a2-42e1-98ce-762f0cf64bd4",
+            "@type": "Observation",
+            "image": "16938cab-126e-4707-b4c6-54da56fb629e",
+            "maxValue": "0.0",
+            "measurementTechnique": "Psutil.cpu_percent polled at 0.05",
+            "minValue": "0.0",
+            "observationAbout": {
+                "@id": "#19d1a07a-96bf-4fda-8c17-ef512b9e0fbc" 
+            },
+            "value": { 
+                "@id": "4ce5a46a-fa3c-4366-83a3-80e3abde640a" 
+            }
+        },
+        {
+            "@id": "#2901f5bd-3103-4d72-a3b6-4310ba80bf36",
+            "@type": "HardwareComponent",
+            "active": "3142991872",
+            "available": "6736965632",
+            "buffers": "147083264",
+            "cached": "6189883392",
+            "description": "RAM properties as reported by mem_info()",
+            "free": "725217280",
+            "inactive": "3844759552",
+            "name": "RAM",
+            "percent": "19.1",
+            "shared": "3461120",
+            "slab": "502702080",
+            "total": "8323014656",
+            "used": "1260830720"
+        },
+        {
+            "1K-blocks": "102626232",
+            "@id": "#5b5d0146-bd8b-4099-ba54-db6f2810878f",
+            "@type": "HardwareComponent",
+            "Available": "97364452",
+            "Filesystem": "/dev/vdb",
+            "Mounted": "/mnt/storage",
+            "Use%": "1%",
+            "Used": "2516",
+            "description": "Storage properties as reported by ds",
+            "name": "Storage"
+        },
+        {
+            "@id": "#bcc0c0cd-ffde-4c77-b3df-8741c9452e75",
+            "@type": "HardwareRuntime",
+            "name": "Hardware Runtime",
+            "component": [
+                {
+                    "@id": "#19d1a07a-96bf-4fda-8c17-ef512b9e0fbc"
+                },
+                {
+                    "@id": "#5b5d0146-bd8b-4099-ba54-db6f2810878f"
+                },
+                {
+                    "@id": "#2901f5bd-3103-4d72-a3b6-4310ba80bf36"
+                }
+            ]
+        },
+        {
+            "@id": "#ffe4fdeb-39a9-4a7a-9d74-382ea7bdad76",
+            "@type": "Organization",
+            "name": "The University of Auckland"
+        },
+        {
+            "@id": "40bcc1d4-fbd3-4e4a-bd5a-970dff566164",
+            "@type": "File",
+            "contentSize": 86091,
+            "encodingFormat": "text/plain",
+            "name": "RevText input",
+            "source": "rev_text/input/test.txt"
+        },
+        {
+            "@id": "e451c118-2e77-4e2a-b934-99b80cfe8471",
+            "@type": "File",
+            "contentSize": 85547,
+            "encodingFormat": "text/plain",
+            "name": "RevText output",
+            "source": "rev_text/output/test.txt"
+        }
+    ]
+}

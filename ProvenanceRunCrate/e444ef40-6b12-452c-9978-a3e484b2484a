@@ -1,0 +1,10 @@
+def rev_txt(input_file, output_file):
+    with open(input_file, 'r') as f:
+        lines = f.readlines()
+    lines = [line.strip() for line in lines]
+    lines = [line[::-1] for line in lines if line]
+
+    from pathlib import Path
+    Path(output_file).parent.mkdir(parents=True, exist_ok=True)
+    with open(output_file, 'w') as f:
+        f.write('\n'.join(lines))
