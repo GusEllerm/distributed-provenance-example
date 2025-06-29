@@ -1,20 +1,5 @@
 {
-    "@context": [
-        "https://w3id.org/ro/crate/1.1/context",
-        "https://w3id.org/ro/terms/workflow-run#",
-        {
-            "performance": {
-                "@id": "https://placeholder.org/performance",
-                "@type": "@id"
-            },
-            "Observation": "https://schema.org/Observation",
-            "observationAbout": "https://schema.org/observationAbout",
-            "value": "https://schema.org/value",
-            "minValue": "https://schema.org/minValue",
-            "maxValue": "https://schema.org/maxValue",
-            "measurementTechnique": "https://schema.org/measurementTechnique"
-        }
-    ],
+    "@context": "https://raw.githubusercontent.com/GusEllerm/distributed-provenance-example/master/context.json",
     "@graph": [
         {
             "@id": "./",
