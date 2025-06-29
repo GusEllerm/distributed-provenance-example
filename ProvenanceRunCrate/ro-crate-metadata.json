@@ -27,6 +27,12 @@
                     "@id": "WEP.json"
                 },
                 {
+                    "@id": "WED.json"
+                },
+                {
+                    "@id": "input.json"
+                },
+                {
                     "@id": "16938cab-126e-4707-b4c6-54da56fb629e"
                 },
                 {
@@ -497,8 +503,20 @@
         {
             "@id": "4ce5a46a-fa3c-4366-83a3-80e3abde640a",
             "@type": "File",
-            "encodingFormat": "json",
+            "encodingFormat": "application/json",
             "name": "CPU usage"
+        },
+        {
+            "@id": "WED.json",
+            "@type": "File",
+            "encodingFormat": "application/json",
+            "name": "Workflow Execution Description"
+        },
+        {
+            "@id": "input.json",
+            "@type": "File",
+            "encodingFormat": "application/json",
+            "name": "Workflow Input Description"
         },
         {
             "@id": "40bcc1d4-fbd3-4e4a-bd5a-970dff566164",

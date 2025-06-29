@@ -34,6 +34,12 @@
           "@id": "WEP.json"
         },
         {
+          "@id": "WED.json"
+        },
+        {
+          "@id": "input.json"
+        },
+        {
           "@id": "16938cab-126e-4707-b4c6-54da56fb629e"
         },
         {
@@ -798,8 +804,34 @@
     {
       "@id": "4ce5a46a-fa3c-4366-83a3-80e3abde640a",
       "@type": "File",
-      "encodingFormat": "json",
+      "encodingFormat": "application/json",
       "name": "CPU usage",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "WED.json",
+      "@type": "File",
+      "encodingFormat": "application/json",
+      "name": "Workflow Execution Description",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "input.json",
+      "@type": "File",
+      "encodingFormat": "application/json",
+      "name": "Workflow Input Description",
       "@reverse": {
         "hasPart": [
           {
@@ -1237,6 +1269,10 @@ table.table {
             <td style='text-align:left'><ul>
                         <li><a href="#WEP.json">WEP.json</a></li>
                         
+                        <li><a href="#WED.json">Workflow Execution Description</a></li>
+                        
+                        <li><a href="#input.json">Workflow Input Description</a></li>
+                        
                         <li><a href="#16938cab-126e-4707-b4c6-54da56fb629e">CPU usage</a></li>
                         
                         <li><a href="#4ce5a46a-fa3c-4366-83a3-80e3abde640a">CPU usage</a></li>
@@ -1465,6 +1501,66 @@ table.table {
         </div>
         <hr/><br/><br/>
            <div>
+            <h3><a href="WED.json">⬇️ Download: </a> Workflow Execution Description</h3>
+            
+            
+            
+            
+        <div id="WED.json">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>WED.json</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>Workflow Execution Description</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">encodingFormat<span>&nbsp;</span><a href="http://schema.org/encodingFormat">[?]</a></th>
+            <td style='text-align:left'><span>application/json</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#./">Example Provenance-Aware Globus Flows execution</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="input.json">⬇️ Download: </a> Workflow Input Description</h3>
+            
+            
+            
+            
+        <div id="input.json">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>input.json</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>Workflow Input Description</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">encodingFormat<span>&nbsp;</span><a href="http://schema.org/encodingFormat">[?]</a></th>
+            <td style='text-align:left'><span>application/json</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#./">Example Provenance-Aware Globus Flows execution</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
             <h3><a href="16938cab-126e-4707-b4c6-54da56fb629e">⬇️ Download: </a> CPU usage</h3>
             
             
@@ -1514,7 +1610,7 @@ table.table {
             <td style='text-align:left'><span>File</span></td>
             </tr><tr>
             <th style="text-align:left;" class="prop">encodingFormat<span>&nbsp;</span><a href="http://schema.org/encodingFormat">[?]</a></th>
-            <td style='text-align:left'><span>json</span></td>
+            <td style='text-align:left'><span>application/json</span></td>
             </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
             <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
             <td style='text-align:left'><a href="#./">Example Provenance-Aware Globus Flows execution</a></td>
