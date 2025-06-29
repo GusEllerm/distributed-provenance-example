@@ -177,7 +177,7 @@
             "@id": "#b8a80195-f749-40c0-96a8-78f0db612cf2",
             "@type": "HardwareRuntime",
             "name": "Hardware Runtime",
-            "components": [
+            "component": [
                 {
                     "@id": "#403381b5-2242-4099-9589-a50d557eba80"
                 },

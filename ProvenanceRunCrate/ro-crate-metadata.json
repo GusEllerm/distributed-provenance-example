@@ -1,5 +1,20 @@
 {
-    "@context": "https://w3id.org/ro/crate/1.1/context",
+    "@context": [
+        "https://w3id.org/ro/crate/1.1/context",
+        "https://w3id.org/ro/terms/workflow-run#",
+        {
+            "performance": {
+                "@id": "https://placeholder.org/performance",
+                "@type": "@id"
+            },
+            "Observation": "https://schema.org/Observation",
+            "observationAbout": "https://schema.org/observationAbout",
+            "value": "https://schema.org/value",
+            "minValue": "https://schema.org/minValue",
+            "maxValue": "https://schema.org/maxValue",
+            "measurementTechnique": "https://schema.org/measurementTechnique"
+        }
+    ],
     "@graph": [
         {
             "@id": "./",
@@ -526,8 +541,7 @@
             "exampleOfWork": {
                 "@id": "WEP.json#$.input.RevTxt.input_file"
             },
-            "name": "RevText input",
-            "source": "rev_text/input/test.txt"
+            "name": "RevText input"
         },
         {
             "@id": "e451c118-2e77-4e2a-b934-99b80cfe8471",
@@ -537,8 +551,7 @@
             "exampleOfWork": {
                 "@id": "WEP.json#$.input.RevTxt.output_file"
             },
-            "name": "RevText output",
-            "source": "rev_text/output/test.txt"
+            "name": "RevText output"
         },
         {
             "@id": "e444ef40-6b12-452c-9978-a3e484b2484a",
@@ -654,7 +667,7 @@
             "@id": "#b8a80195-f749-40c0-96a8-78f0db612cf2",
             "@type": "HardwareRuntime",
             "name": "Hardware Runtime",
-            "components": [
+            "component": [
                 {
                     "@id": "#403381b5-2242-4099-9589-a50d557eba80"
                 },
@@ -691,8 +704,7 @@
             "exampleOfWork": {
                 "@id": "WEP.json#$.input.SortTxt.input_file"
             },
-            "name": "sort_text input",
-            "source": "sort_text/input/test.txt"
+            "name": "sort_text input"
         },
         {
             "@id": "ffb16e21-03a1-4513-a098-88a75ca6e756",
@@ -702,8 +714,7 @@
             "exampleOfWork": {
                 "@id": "WEP.json#$.input.SortTxt.output_file"
             },
-            "name": "sort_text output",
-            "source": "sort_text/output/test.txt"
+            "name": "sort_text output"
         },
         {
             "@id": "2753cdea-1429-4172-b0d5-c63e95b2ce6b",
