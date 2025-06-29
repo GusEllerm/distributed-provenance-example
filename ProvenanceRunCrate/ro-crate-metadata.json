@@ -309,7 +309,7 @@
             "@id": "#51db247c-b743-43fc-8589-80331ce39551",
             "@type": "SoftwareApplication",
             "applicationCategory": "WorkflowEngineApplication",
-            "description": "Globus Flows is a managed service for composing and running multi-step, reliable data flows in distributed systems.",
+            "description": "Globus Flows is a managed service for composing and running multi-step, reliable data flows in Distributed systems.",
             "identifier": "https://www.globus.org/flows",
             "name": "Globus Flows",
             "url": "https://www.globus.org/flows"
@@ -548,7 +548,7 @@
                 "Schedule",
                 "File"
             ],
-            "name": "Distriubted Step Crate",
+            "name": "Distributed Step Crate",
             "hasPart": {
                 "@id": "#bcc0c0cd-ffde-4c77-b3df-8741c9452e75"
             },
@@ -713,7 +713,7 @@
                 "Schedule",
                 "File"
             ],
-            "name": "Distriubted Step Crate",
+            "name": "Distributed Step Crate",
             "hasPart": {
                 "@id": "#b8a80195-f749-40c0-96a8-78f0db612cf2"
             },
