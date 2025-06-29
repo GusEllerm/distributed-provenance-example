@@ -24,7 +24,7 @@ Each **Distributed Step Crate** corresponds to a granular step in the overall wo
 
 ## 🌐 Web Preview
 
-This repository includes a minimal GitHub Pages site to preview the RO-Crate visualizations via `ro-crate-preview.html`.
+This repository includes a minimal [GitHub Pages](https://gusellerm.github.io/distributed-provenance-example/) site to preview the RO-Crate visualizations via `ro-crate-preview.html`.
 
 ---
 
