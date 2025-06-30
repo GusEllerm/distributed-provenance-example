@@ -6,7 +6,77 @@
 
 <script type="application/ld+json"> 
   {
-  "@context": "https://w3id.org/ro/crate/1.1/context",
+  "@context": [
+    "https://w3id.org/ro/crate/1.1/context",
+    "https://w3id.org/ro/terms/workflow-run#",
+    {
+      "performance": {
+        "@id": "https://placeholder.org/performance",
+        "@type": "@id"
+      },
+      "Observation": "https://schema.org/Observation",
+      "observationAbout": "https://schema.org/observationAbout",
+      "value": "https://schema.org/value",
+      "minValue": "https://schema.org/minValue",
+      "maxValue": "https://schema.org/maxValue",
+      "measurementTechnique": "https://schema.org/measurementTechnique",
+      "component": "https://example.org/hardware#component",
+      "1K-blocks": "https://example.org/hardware#1K-blocks",
+      "Address sizes": "https://example.org/hardware#AddressSizes",
+      "Architecture": "https://example.org/hardware#Architecture",
+      "Available": "https://example.org/hardware#Available",
+      "BogoMIPS": "https://example.org/hardware#BogoMIPS",
+      "Byte Order": "https://example.org/hardware#ByteOrder",
+      "CPU family": "https://example.org/hardware#CPUFamily",
+      "CPU op-mode(s)": "https://example.org/hardware#CPUOpModes",
+      "CPU(s)": "https://example.org/hardware#CPUs",
+      "Core(s) per socket": "https://example.org/hardware#CoresPerSocket",
+      "Filesystem": "https://example.org/hardware#Filesystem",
+      "Flags": "https://example.org/hardware#Flags",
+      "Hypervisor vendor": "https://example.org/hardware#HypervisorVendor",
+      "L1d cache": "https://example.org/hardware#L1dCache",
+      "L1i cache": "https://example.org/hardware#L1iCache",
+      "L2 cache": "https://example.org/hardware#L2Cache",
+      "L3 cache": "https://example.org/hardware#L3Cache",
+      "Model name": "https://example.org/hardware#ModelName",
+      "Model": "https://example.org/hardware#Model",
+      "Mounted": "https://example.org/hardware#Mounted",
+      "NUMA node(s)": "https://example.org/hardware#NUMANodes",
+      "NUMA node0 CPU(s)": "https://example.org/hardware#NUMANode0CPUs",
+      "On-line CPU(s) list": "https://example.org/hardware#OnlineCPUs",
+      "Socket(s)": "https://example.org/hardware#Sockets",
+      "Stepping": "https://example.org/hardware#Stepping",
+      "Thread(s) per core": "https://example.org/hardware#ThreadsPerCore",
+      "Use%": "https://example.org/hardware#UsePercent",
+      "Used": "https://example.org/hardware#Used",
+      "Vendor ID": "https://example.org/hardware#VendorID",
+      "Virtualization type": "https://example.org/hardware#VirtualizationType",
+      "Virtualization": "https://example.org/hardware#Virtualization",
+      "Vulnerability Gather data sampling": "https://example.org/hardware#VulnGatherDataSampling",
+      "Vulnerability Itlb multihit": "https://example.org/hardware#VulnItlbMultihit",
+      "Vulnerability L1tf": "https://example.org/hardware#VulnL1tf",
+      "Vulnerability Mds": "https://example.org/hardware#VulnMds",
+      "Vulnerability Meltdown": "https://example.org/hardware#VulnMeltdown",
+      "Vulnerability Mmio stale data": "https://example.org/hardware#VulnMmioStaleData",
+      "Vulnerability Retbleed": "https://example.org/hardware#VulnRetbleed",
+      "Vulnerability Spec rstack overflow": "https://example.org/hardware#VulnSpecRstackOverflow",
+      "Vulnerability Spec store bypass": "https://example.org/hardware#VulnSpecStoreBypass",
+      "Vulnerability Spectre v1": "https://example.org/hardware#VulnSpectreV1",
+      "Vulnerability Spectre v2": "https://example.org/hardware#VulnSpectreV2",
+      "Vulnerability Srbds": "https://example.org/hardware#VulnSrbds",
+      "Vulnerability Tsx async abort": "https://example.org/hardware#VulnTsxAsyncAbort",
+      "active": "https://example.org/hardware#active",
+      "available": "https://example.org/hardware#available",
+      "buffers": "https://example.org/hardware#buffers",
+      "cached": "https://example.org/hardware#cached",
+      "inactive": "https://example.org/hardware#inactive",
+      "percent": "https://example.org/hardware#percent",
+      "shared": "https://example.org/hardware#shared",
+      "slab": "https://example.org/hardware#slab",
+      "total": "https://example.org/hardware#total",
+      "used": "https://example.org/hardware#used"
+    }
+  ],
   "@graph": [
     {
       "@id": "./",
@@ -131,9 +201,7 @@
           "@id": "WEP.json#main#$.input.SortTxt.output_file"
         }
       ],
-      "programmingLanguage": {
-        "@id": "https://w3id.org/workflowhub/workflow-ro-crate#globus"
-      },
+      "programmingLanguage": "Amazon States Language",
       "step": [
         {
           "@id": "WEP.json#main/RevTxt"
@@ -849,7 +917,6 @@
         "@id": "WEP.json#$.input.RevTxt.input_file"
       },
       "name": "RevText input",
-      "source": "rev_text/input/test.txt",
       "@reverse": {
         "hasPart": [
           {
@@ -875,7 +942,6 @@
         "@id": "WEP.json#$.input.RevTxt.output_file"
       },
       "name": "RevText output",
-      "source": "rev_text/output/test.txt",
       "@reverse": {
         "hasPart": [
           {
@@ -971,7 +1037,7 @@
         "@id": "#4478968e-caaa-49a6-b614-8600e5e7603c"
       },
       "@reverse": {
-        "components": [
+        "component": [
           {
             "@id": "#b8a80195-f749-40c0-96a8-78f0db612cf2"
           }
@@ -1013,7 +1079,7 @@
       "total": "8323014656",
       "used": "1251102720",
       "@reverse": {
-        "components": [
+        "component": [
           {
             "@id": "#b8a80195-f749-40c0-96a8-78f0db612cf2"
           }
@@ -1032,7 +1098,7 @@
       "description": "Storage properties as reported by ds",
       "name": "Storage",
       "@reverse": {
-        "components": [
+        "component": [
           {
             "@id": "#b8a80195-f749-40c0-96a8-78f0db612cf2"
           }
@@ -1043,7 +1109,7 @@
       "@id": "#b8a80195-f749-40c0-96a8-78f0db612cf2",
       "@type": "HardwareRuntime",
       "name": "Hardware Runtime",
-      "components": [
+      "component": [
         {
           "@id": "#403381b5-2242-4099-9589-a50d557eba80"
         },
@@ -1102,7 +1168,6 @@
         "@id": "WEP.json#$.input.SortTxt.input_file"
       },
       "name": "sort_text input",
-      "source": "sort_text/input/test.txt",
       "@reverse": {
         "hasPart": [
           {
@@ -1125,7 +1190,6 @@
         "@id": "WEP.json#$.input.SortTxt.output_file"
       },
       "name": "sort_text output",
-      "source": "sort_text/output/test.txt",
       "@reverse": {
         "hasPart": [
           {
@@ -1456,7 +1520,7 @@ table.table {
                         <li><span>HowTo</span></li>
                         </ul></td>
             </tr><tr>
-            <th style="text-align:left;" class="prop">connection</th>
+            <th style="text-align:left;" class="prop">connection<span>&nbsp;</span><a href="https://w3id.org/ro/terms/workflow-run#connection">[?]</a></th>
             <td style='text-align:left'><a href="#%2374b88a92-a349-4d19-8d7e-a0f3ffbca1b5">#74b88a92-a349-4d19-8d7e-a0f3ffbca1b5</a></td>
             </tr><tr>
             <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
@@ -1477,7 +1541,7 @@ table.table {
             <td style='text-align:left'><a href="#WEP.json%23main%23%24.input.SortTxt.output_file">main#$.input.SortTxt.output_file</a></td>
             </tr><tr>
             <th style="text-align:left;" class="prop">programmingLanguage<span>&nbsp;</span><a href="http://schema.org/programmingLanguage">[?]</a></th>
-            <td style='text-align:left'><a href="https://w3id.org/workflowhub/workflow-ro-crate#globus">https://w3id.org/workflowhub/workflow-ro-crate#globus</a></td>
+            <td style='text-align:left'><span>Amazon States Language</span></td>
             </tr><tr>
             <th style="text-align:left;" class="prop">step<span>&nbsp;</span><a href="http://schema.org/step">[?]</a></th>
             <td style='text-align:left'><ul>
@@ -1647,9 +1711,6 @@ table.table {
             </tr><tr>
             <th style="text-align:left;" class="prop">exampleOfWork<span>&nbsp;</span><a href="http://schema.org/exampleOfWork">[?]</a></th>
             <td style='text-align:left'><a href="#WEP.json%23%24.input.RevTxt.input_file">$.input.RevTxt.input_file</a></td>
-            </tr><tr>
-            <th style="text-align:left;" class="prop">source</th>
-            <td style='text-align:left'><span>rev_text/input/test.txt</span></td>
             </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
             <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
             <td style='text-align:left'><a href="#./">Example Provenance-Aware Globus Flows execution</a></td>
@@ -1693,9 +1754,6 @@ table.table {
             </tr><tr>
             <th style="text-align:left;" class="prop">exampleOfWork<span>&nbsp;</span><a href="http://schema.org/exampleOfWork">[?]</a></th>
             <td style='text-align:left'><a href="#WEP.json%23%24.input.RevTxt.output_file">$.input.RevTxt.output_file</a></td>
-            </tr><tr>
-            <th style="text-align:left;" class="prop">source</th>
-            <td style='text-align:left'><span>rev_text/output/test.txt</span></td>
             </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
             <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
             <td style='text-align:left'><a href="#./">Example Provenance-Aware Globus Flows execution</a></td>
@@ -1848,9 +1906,6 @@ table.table {
             </tr><tr>
             <th style="text-align:left;" class="prop">exampleOfWork<span>&nbsp;</span><a href="http://schema.org/exampleOfWork">[?]</a></th>
             <td style='text-align:left'><a href="#WEP.json%23%24.input.SortTxt.input_file">$.input.SortTxt.input_file</a></td>
-            </tr><tr>
-            <th style="text-align:left;" class="prop">source</th>
-            <td style='text-align:left'><span>sort_text/input/test.txt</span></td>
             </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
             <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
             <td style='text-align:left'><a href="#./">Example Provenance-Aware Globus Flows execution</a></td>
@@ -1890,9 +1945,6 @@ table.table {
             </tr><tr>
             <th style="text-align:left;" class="prop">exampleOfWork<span>&nbsp;</span><a href="http://schema.org/exampleOfWork">[?]</a></th>
             <td style='text-align:left'><a href="#WEP.json%23%24.input.SortTxt.output_file">$.input.SortTxt.output_file</a></td>
-            </tr><tr>
-            <th style="text-align:left;" class="prop">source</th>
-            <td style='text-align:left'><span>sort_text/output/test.txt</span></td>
             </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
             <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
             <td style='text-align:left'><a href="#./">Example Provenance-Aware Globus Flows execution</a></td>
