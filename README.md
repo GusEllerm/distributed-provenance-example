@@ -7,7 +7,6 @@ This repository provides an example of a **Distributed Provenance-Aware Workflow
 ## Contents
 
 ```
-/
 ├── index.html                          
 ├── Distributed_Provenance_Crate/ # Example Distributed Provenance Crate
 ├── validation/ # Validation results and comparison summaries
