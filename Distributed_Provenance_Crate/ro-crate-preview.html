@@ -302,6 +302,22 @@
       }
     },
     {
+      "@id": "#pv-main/reverse_sort",
+      "@type": "PropertyValue",
+      "exampleOfWork": {
+        "@id": "WEP.json#main#$.input.SortTxt.reverse"
+      },
+      "name": "main/reverse_sort",
+      "value": "True",
+      "@reverse": {
+        "object": [
+          {
+            "@id": "#029ecaff-4dec-4a11-a211-8a01c717f6e5"
+          }
+        ]
+      }
+    },
+    {
       "@id": "WEP.json#main#$.input.RevTxt.input_file",
       "@type": "FormalParameter",
       "additionalType": "File",
@@ -317,12 +333,17 @@
     {
       "@id": "WEP.json#main#$.input.SortTxt.reverse",
       "@type": "FormalParameter",
-      "additionalType": "File",
+      "additionalType": "Boolean",
       "name": "main#$.input.SortTxt.reverse",
       "@reverse": {
         "input": [
           {
             "@id": "WEP.json"
+          }
+        ],
+        "exampleOfWork": [
+          {
+            "@id": "#pv-main/reverse_sort"
           }
         ]
       }
@@ -605,12 +626,17 @@
     {
       "@id": "WEP.json#$.input.SortTxt.reverse",
       "@type": "FormalParameter",
-      "additionalType": "File",
+      "additionalType": "Boolian",
       "name": "$.input.SortTxt.reverse",
       "@reverse": {
         "input": [
           {
             "@id": "WEP.json#SortTxt"
+          }
+        ],
+        "exampleOfWork": [
+          {
+            "@id": "#pv-main/sorted/reverse"
           }
         ]
       }
@@ -659,6 +685,9 @@
       "object": [
         {
           "@id": "40bcc1d4-fbd3-4e4a-bd5a-970dff566164"
+        },
+        {
+          "@id": "#pv-main/reverse_sort"
         }
       ],
       "result": [
@@ -1236,9 +1265,14 @@
       "hasPart": {
         "@id": "#b8a80195-f749-40c0-96a8-78f0db612cf2"
       },
-      "object": {
-        "@id": "9e547861-e3c3-4f26-8e7e-91c7c4a0a557"
-      },
+      "object": [
+        {
+          "@id": "9e547861-e3c3-4f26-8e7e-91c7c4a0a557"
+        },
+        {
+          "@id": "#pv-main/sorted/reverse"
+        }
+      ],
       "requiresSubscription": "False",
       "result": {
         "@id": "ffb16e21-03a1-4513-a098-88a75ca6e756"
@@ -1255,6 +1289,22 @@
         "object": [
           {
             "@id": "#43c62869-0875-4c5a-a59d-8d75ad6a7da8"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#pv-main/sorted/reverse",
+      "@type": "PropertyValue",
+      "exampleOfWork": {
+        "@id": "WEP.json#$.input.SortTxt.reverse"
+      },
+      "name": "main/sorted/reverse",
+      "value": "True",
+      "@reverse": {
+        "object": [
+          {
+            "@id": "2753cdea-1429-4172-b0d5-c63e95b2ce6b"
           }
         ]
       }
@@ -2010,7 +2060,11 @@ table.table {
             <td style='text-align:left'><a href="#%23b8a80195-f749-40c0-96a8-78f0db612cf2">Hardware Runtime</a></td>
             </tr><tr>
             <th style="text-align:left;" class="prop">object<span>&nbsp;</span><a href="http://schema.org/object">[?]</a></th>
-            <td style='text-align:left'><a href="#9e547861-e3c3-4f26-8e7e-91c7c4a0a557">sort_text input</a></td>
+            <td style='text-align:left'><ul>
+                        <li><a href="#9e547861-e3c3-4f26-8e7e-91c7c4a0a557">sort_text input</a></li>
+                        
+                        <li>main/sorted/reverse: True</li>
+                        </ul></td>
             </tr><tr>
             <th style="text-align:left;" class="prop">requiresSubscription<span>&nbsp;</span><a href="http://schema.org/requiresSubscription">[?]</a></th>
             <td style='text-align:left'><span>False</span></td>
