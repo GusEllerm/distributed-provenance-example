@@ -187,7 +187,9 @@
                     "@id": "WEP.json#main#$.input.SortTxt.output_file"
                 }
             ],
-            "programmingLanguage": "Amazon States Language",
+            "programmingLanguage": {
+                "@id": "Amazon-States-Language"
+            },
             "step": [
                 {
                     "@id": "WEP.json#main/RevTxt"
@@ -196,6 +198,13 @@
                     "@id": "WEP.json#main/SortTxt"
                 }
             ]
+        },
+        {
+            "@id": "Amazon-States-Language",
+            "@type": "ComputerLanguage",
+            "alternateName": "ASL",
+            "name": "Amazon States Langauge",
+            "url": {"@id": "https://states-language.net"}
         },
         {
             "@id": "https://w3id.org/ro/wfrun/process/0.1",

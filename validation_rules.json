@@ -1,0 +1,118 @@
+[
+  {
+    "source_type": ["File", "SoftwareSourceCode", "ComputationalWorkflow", "HowTo"],
+    "fuzzy": false,
+    "relation": "step",
+    "target_type": "HowToStep",
+    "expected_count": 2
+  },
+  {
+    "source_type": ["File", "SoftwareSourceCode", "ComputationalWorkflow", "HowTo"],
+    "fuzzy": false,
+    "relation": ["input", "output"],
+    "target_type": "FormalParameter",
+    "expected_count": 3
+  },
+  {
+    "source_type": "HowToStep",
+    "fuzzy": false,
+    "relation": "workExample",
+    "target_type": "SoftwareApplication",
+    "expected_count": 1
+  },
+  {
+    "source_type": "SoftwareApplication",
+    "fuzzy": true,
+    "discriminator_relation": ["input", "output"],
+    "discriminator_mode": "include",
+    "relation": ["input", "output"],
+    "target_type": "FormalParameter",
+    "expected_count": [2, 3]
+  },
+  {
+    "source_type": "OrganizeAction",
+    "fuzzy": false,
+    "relation": "instrument",
+    "target_type": "SoftwareApplication",
+    "expected_count": 1
+  },
+  {
+    "source_type": "OrganizeAction",
+    "fuzzy": false,
+    "relation": "object",
+    "target_type": "ControlAction",
+    "expected_count": 2
+  },
+  {
+    "source_type": "OrganizeAction",
+    "fuzzy": false,
+    "relation": "result",
+    "target_type": "CreateAction",
+    "expected_count": 1
+  },
+  {
+    "source_type": "CreateAction",
+    "fuzzy": true,
+    "discriminator_relation": "agent",
+    "discriminator_mode": "include",
+    "relation": "agent",
+    "target_type": ["Person", "Organization"],
+    "expected_count": 1
+  },
+  {
+    "source_type": "CreateAction",
+    "fuzzy": true,
+    "discriminator_relation": "agent",
+    "discriminator_mode": "include",
+    "relation": ["object", "result"],
+    "target_type": ["File", "PropertyValue"],
+    "expected_count": [2,3]
+  },
+  {
+    "source_type": "CreateAction",
+    "fuzzy": true,
+    "discriminator_relation": "agent",
+    "discriminator_mode": "include",
+    "relation": "instrument",
+    "target_type": ["File", "SoftwareSourceCode", "ComputationalWorkflow", "HowTo"],
+    "expected_count": 1
+  },
+  {
+    "source_type": "ControlAction",
+    "fuzzy": false,
+    "relation": "instrument",
+    "target_type": "HowToStep",
+    "expected_count": 1
+  },
+  {
+    "source_type": "ControlAction",
+    "fuzzy": false,
+    "relation": "object",
+    "target_type_groups": [
+      ["CreateAction"],
+      ["CreateAction", "ActionAccessSpecification", "Schedule", "File"]
+    ],
+    "expected_count": 1
+  },
+  {
+    "source_type": "CreateAction",
+    "fuzzy": true,
+    "discriminator_relation": "agent",
+    "discriminator_mode": "exclude",
+    "relation": "instrument",
+    "target_type": "SoftwareApplication",
+    "expected_count": 1
+  },
+  {
+    "source_type": "CreateAction",
+    "fuzzy": true,
+    "discriminator_relation": "agent",
+    "discriminator_mode": "exclude",
+    "relation": ["object", "result"],
+    "target_type": ["File", "PropertyValue"],
+    "expected_count": [3, 2]
+  }
+]
+
+
+

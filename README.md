@@ -11,6 +11,10 @@ This repository provides an example of a **Distributed Provenance-Aware Workflow
 ├── index.html                          # Entry point for web-based preview
 ├── ProvenanceRunCrate/                # Main Provenance Run Crate
 │   └── ro-crate-preview.html
+├── validation/                      # Validation results and comparison summaries
+│   ├── entity_shape_comparison.json
+│   ├── validation_output.json
+│   └── reference_manifest.json
 └── e7beae76-bf36-4484-bcc7-9ad133b0c5e2/
     ├── 395cdbd9-5b81-49a2-a7ae-9d84a8f70428/
     │   └── ro-crate-preview.html      # Distributed Step Crate 1
@@ -28,6 +32,17 @@ This repository includes a minimal [GitHub Pages](https://gusellerm.github.io/di
 
 ---
 
+## ✅ Validation Summary
+
+A structured comparison has been performed between the **Provenance Run Crate** and the **Distributed Provenance Crate**, using `comparator.py`.
+
+Results are viewable on the [Validation Summary Page](https://gusellerm.github.io/distributed-provenance-example/validation-summary.html) and include:
+
+- Entity shape comparisons between crates
+- Validation of structural relationships and constraints as defined in `validation_rules.json`
+
+---
+
 ## 🧾 License
 
 This work is licensed under the **Creative Commons Attribution 4.0 International (CC BY 4.0)** License.
@@ -41,4 +56,4 @@ More information: [https://creativecommons.org/licenses/by/4.0/](https://creativ
 
 - [RO-Crate Specification](https://www.researchobject.org/ro-crate/)
 - [Provenance Run Crate](https://www.researchobject.org/workflow-run-crate/profiles/provenance_run_crate/)
-- [Globus Flows](https://www.google.com/search?client=safari&rls=en&q=Globus+FLows&ie=UTF-8&oe=UTF-8)
+- [Globus Flows](https://www.globus.org/globus-flows)

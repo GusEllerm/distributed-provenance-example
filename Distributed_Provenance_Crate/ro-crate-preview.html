@@ -201,7 +201,9 @@
           "@id": "WEP.json#main#$.input.SortTxt.output_file"
         }
       ],
-      "programmingLanguage": "Amazon States Language",
+      "programmingLanguage": {
+        "@id": "Amazon-States-Language"
+      },
       "step": [
         {
           "@id": "WEP.json#main/RevTxt"
@@ -224,6 +226,22 @@
         "instrument": [
           {
             "@id": "#029ecaff-4dec-4a11-a211-8a01c717f6e5"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "Amazon-States-Language",
+      "@type": "ComputerLanguage",
+      "alternateName": "ASL",
+      "name": "Amazon States Langauge",
+      "url": {
+        "@id": "https://states-language.net"
+      },
+      "@reverse": {
+        "programmingLanguage": [
+          {
+            "@id": "WEP.json"
           }
         ]
       }
@@ -1541,7 +1559,7 @@ table.table {
             <td style='text-align:left'><a href="#WEP.json%23main%23%24.input.SortTxt.output_file">main#$.input.SortTxt.output_file</a></td>
             </tr><tr>
             <th style="text-align:left;" class="prop">programmingLanguage<span>&nbsp;</span><a href="http://schema.org/programmingLanguage">[?]</a></th>
-            <td style='text-align:left'><span>Amazon States Language</span></td>
+            <td style='text-align:left'><a href="#Amazon-States-Language">Amazon States Langauge</a></td>
             </tr><tr>
             <th style="text-align:left;" class="prop">step<span>&nbsp;</span><a href="http://schema.org/step">[?]</a></th>
             <td style='text-align:left'><ul>
