@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Validation Summary</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 3em 4em;
+      background-color: #ffffff;
+      color: #222;
+      line-height: 1.6;
+    }
+    h1 {
+      color: #1a1a1a;
+      font-weight: 700;
+      font-size: 2.5em;
+      margin-bottom: 0.4em;
+    }
+    h2 {
+      color: #333;
+      font-weight: 600;
+      margin-top: 2.5em;
+      margin-bottom: 0.3em;
+      font-size: 1.6em;
+    }
+    p {
+      font-size: 1em;
+      color: #555;
+      margin-top: 0;
+      margin-bottom: 1.2em;
+      max-width: 700px;
+    }
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0 10px;
+      margin-top: 1em;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      font-size: 0.95em;
+      background-color: #fafafa;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: 0.75em 1em;
+      text-align: left;
+    }
+    th {
+      background-color: #007acc;
+      color: #fff;
+      font-weight: 600;
+      cursor: default;
+      user-select: none;
+      position: relative;
+      border-bottom: 2px solid #005fa3;
+    }
+    th[title] {
+      cursor: help;
+    }
+    td {
+      background-color: #fff;
+      border-bottom: 1px solid #ddd;
+      vertical-align: middle;
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+    pre {
+      background: #f0f0f0;
+      padding: 1.2em 1.5em;
+      border-radius: 6px;
+      border: 1px solid #ddd;
+      overflow-x: auto;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.9em;
+      max-width: 100%;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+  </style>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js"></script>
+</head>
+<body>
+  <h1>Validation Summary</h1>
+
+  <p>This page summarises the validation results of the Distributed Step Crate against the reference Provenance Run Crate manifest. Each of the tables below are generated via the comparator.py tool within this repo.</p>
+
+  <h2>Validation Output</h2>
+
+  <p>This table highlights matches and discrepancies within entity types between the Provenance Run Crate reference example, and the Distributed Provenance crate example.</p>
+  <div id="entity-shape-table"></div>
+
+
+  <div style="height: 2em;"></div>
+  <p>This table evaluates the shape of entities within the Provenance Run Crate -- i.e. its expected relationships to connected entities -- and validates those shapes against the example Distributed Provenance Crate entities.</p>
+  <div id="validation-output-table"></div>
+
+  <h2>Reference Manifest</h2>
+  <p>The reference manifest provides the original configuration and metadata used as a baseline for validation.</p>
+  <pre><code id="reference-manifest" class="language-json"></code></pre>
+
+  <script>
+    async function loadContent() {
+      const refManifest = await fetch('reference_manifest.json').then(r => r.json());
+      const prettyJson = JSON.stringify(refManifest, null, 2);
+      const refElem = document.getElementById('reference-manifest');
+      refElem.textContent = prettyJson;
+      Prism.highlightElement(refElem);
+
+      const shapeData = await fetch('entity_shape_comparison.json').then(r => r.json());
+      renderEntityShapeTable(shapeData);
+
+      renderValidationOutputTable();
+    }
+
+    function renderEntityShapeTable(data) {
+      const table = document.createElement('table');
+      const header = table.insertRow();
+      ['Entity Type', 'Ref Count', 'Test Count', 'Match'].forEach(key => {
+        const th = document.createElement('th');
+        th.textContent = key;
+        header.appendChild(th);
+      });
+
+      data.forEach(row => {
+        const tr = table.insertRow();
+        const cells = [row['Entity Type'], row['Ref Count'], row['Test Count'], row['Match'] ? '✅' : '❌'];
+        cells.forEach(cellText => {
+          const td = document.createElement('td');
+          td.textContent = cellText;
+          tr.appendChild(td);
+        });
+      });
+
+      document.getElementById('entity-shape-table').appendChild(table);
+    }
+
+    async function renderValidationOutputTable() {
+      const data = await fetch('validation_output.json').then(r => r.json());
+      const table = document.createElement('table');
+      const header = table.insertRow();
+      const keys = [
+        'Source Type',
+        'Relation',
+        'Target Type',
+        'Expected Count',
+        'Fuzzy',
+        'Discriminator',
+        'Discriminator Mode',
+        'Passed'
+      ];
+      keys.forEach(key => {
+        const th = document.createElement('th');
+        th.textContent = key;
+        if (key === 'Fuzzy') {
+          th.title = 'Indicates if, due to the same types being used, entities must be matched using a fuzzy match.';
+        } else if (key === 'Discriminator') {
+          th.title = 'Specifies the discriminator field used to differentiate entities.';
+        } else if (key === 'Discriminator Mode') {
+          th.title = 'Describes the mode of discrimination applied during validation.';
+        }
+        header.appendChild(th);
+      });
+
+      data.forEach(row => {
+        const tr = table.insertRow();
+        keys.forEach(key => {
+          const td = document.createElement('td');
+          let value = row[key];
+          if (Array.isArray(value)) {
+            value = value.join(', ');
+          }
+          td.textContent = value !== null && value !== undefined ? value : '';
+          tr.appendChild(td);
+        });
+      });
+
+      document.getElementById('validation-output-table').appendChild(table);
+    }
+
+    loadContent();
+  </script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+[
+  {
+    "Source Type": "MainEntity",
+    "Relation": "step",
+    "Target Type": "HowToStep",
+    "Expected Count": 2,
+    "Fuzzy": false,
+    "Discriminator": null,
+    "Discriminator Mode": null,
+    "Passed": "\u2705"
+  },
+  {
+    "Source Type": "MainEntity",
+    "Relation": "[input, output]",
+    "Target Type": "FormalParameter",
+    "Expected Count": 3,
+    "Fuzzy": false,
+    "Discriminator": null,
+    "Discriminator Mode": null,
+    "Passed": "\u2705"
+  },
+  {
+    "Source Type": "HowToStep",
+    "Relation": "workExample",
+    "Target Type": "SoftwareApplication",
+    "Expected Count": 1,
+    "Fuzzy": false,
+    "Discriminator": null,
+    "Discriminator Mode": null,
+    "Passed": "\u2705"
+  },
+  {
+    "Source Type": "SoftwareApplication",
+    "Relation": "[input, output]",
+    "Target Type": "FormalParameter",
+    "Expected Count": [
+      2,
+      3
+    ],
+    "Fuzzy": true,
+    "Discriminator": [
+      "input",
+      "output"
+    ],
+    "Discriminator Mode": "include",
+    "Passed": "\u2705"
+  },
+  {
+    "Source Type": "OrganizeAction",
+    "Relation": "instrument",
+    "Target Type": "SoftwareApplication",
+    "Expected Count": 1,
+    "Fuzzy": false,
+    "Discriminator": null,
+    "Discriminator Mode": null,
+    "Passed": "\u2705"
+  },
+  {
+    "Source Type": "OrganizeAction",
+    "Relation": "object",
+    "Target Type": "ControlAction",
+    "Expected Count": 2,
+    "Fuzzy": false,
+    "Discriminator": null,
+    "Discriminator Mode": null,
+    "Passed": "\u2705"
+  },
+  {
+    "Source Type": "OrganizeAction",
+    "Relation": "result",
+    "Target Type": "CreateAction",
+    "Expected Count": 1,
+    "Fuzzy": false,
+    "Discriminator": null,
+    "Discriminator Mode": null,
+    "Passed": "\u2705"
+  },
+  {
+    "Source Type": "CreateAction",
+    "Relation": "agent",
+    "Target Type": "[Person, Organization]",
+    "Expected Count": 1,
+    "Fuzzy": true,
+    "Discriminator": "agent",
+    "Discriminator Mode": "include",
+    "Passed": "\u2705"
+  },
+  {
+    "Source Type": "CreateAction",
+    "Relation": "[object, result]",
+    "Target Type": "[File, PropertyValue]",
+    "Expected Count": [
+      2,
+      3
+    ],
+    "Fuzzy": true,
+    "Discriminator": "agent",
+    "Discriminator Mode": "include",
+    "Passed": "\u2705"
+  },
+  {
+    "Source Type": "CreateAction",
+    "Relation": "instrument",
+    "Target Type": "MainEntity",
+    "Expected Count": 1,
+    "Fuzzy": true,
+    "Discriminator": "agent",
+    "Discriminator Mode": "include",
+    "Passed": "\u2705"
+  },
+  {
+    "Source Type": "ControlAction",
+    "Relation": "instrument",
+    "Target Type": "HowToStep",
+    "Expected Count": 1,
+    "Fuzzy": false,
+    "Discriminator": null,
+    "Discriminator Mode": null,
+    "Passed": "\u2705"
+  },
+  {
+    "Source Type": "ControlAction",
+    "Relation": "object",
+    "Target Type": "CreateAction",
+    "Expected Count": 1,
+    "Fuzzy": false,
+    "Discriminator": null,
+    "Discriminator Mode": null,
+    "Passed": "\u2705"
+  },
+  {
+    "Source Type": "CreateAction",
+    "Relation": "instrument",
+    "Target Type": "SoftwareApplication",
+    "Expected Count": 1,
+    "Fuzzy": true,
+    "Discriminator": "agent",
+    "Discriminator Mode": "exclude",
+    "Passed": "\u2705"
+  },
+  {
+    "Source Type": "CreateAction",
+    "Relation": "[object, result]",
+    "Target Type": "[File, PropertyValue]",
+    "Expected Count": [
+      3,
+      2
+    ],
+    "Fuzzy": true,
+    "Discriminator": "agent",
+    "Discriminator Mode": "exclude",
+    "Passed": "\u2705"
+  }
+]

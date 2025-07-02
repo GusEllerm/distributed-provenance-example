@@ -1,0 +1,80 @@
+[
+  {
+    "Entity Type": "ComputationalWorkflow+File+HowTo+SoftwareSourceCode",
+    "Ref Count": 1,
+    "Test Count": 1,
+    "Match": true
+  },
+  {
+    "Entity Type": "ComputerLanguage",
+    "Ref Count": 1,
+    "Test Count": 1,
+    "Match": true
+  },
+  {
+    "Entity Type": "ControlAction",
+    "Ref Count": 2,
+    "Test Count": 2,
+    "Match": true
+  },
+  {
+    "Entity Type": "CreateAction",
+    "Ref Count": 3,
+    "Test Count": 3,
+    "Match": true
+  },
+  {
+    "Entity Type": "CreativeWork",
+    "Ref Count": 5,
+    "Test Count": 5,
+    "Match": true
+  },
+  {
+    "Entity Type": "Dataset",
+    "Ref Count": 1,
+    "Test Count": 1,
+    "Match": true
+  },
+  {
+    "Entity Type": "File",
+    "Ref Count": 3,
+    "Test Count": 3,
+    "Match": true
+  },
+  {
+    "Entity Type": "FormalParameter",
+    "Ref Count": 8,
+    "Test Count": 8,
+    "Match": true
+  },
+  {
+    "Entity Type": "HowToStep",
+    "Ref Count": 2,
+    "Test Count": 2,
+    "Match": true
+  },
+  {
+    "Entity Type": "OrganizeAction",
+    "Ref Count": 1,
+    "Test Count": 1,
+    "Match": true
+  },
+  {
+    "Entity Type": "Person",
+    "Ref Count": 1,
+    "Test Count": 1,
+    "Match": true
+  },
+  {
+    "Entity Type": "PropertyValue",
+    "Ref Count": 2,
+    "Test Count": 0,
+    "Match": false
+  },
+  {
+    "Entity Type": "SoftwareApplication",
+    "Ref Count": 3,
+    "Test Count": 3,
+    "Match": true
+  }
+]
