@@ -120,7 +120,7 @@
     function renderEntityShapeTable(data) {
       const table = document.createElement('table');
       const header = table.insertRow();
-      ['Entity Type', 'Ref Count', 'Test Count', 'Match'].forEach(key => {
+      ['Entity Type', 'Reference Provenance Run Crate', 'Distributed Provenance Crate', 'Match'].forEach(key => {
         const th = document.createElement('th');
         th.textContent = key;
         header.appendChild(th);

@@ -1,6 +1,6 @@
 [
   {
-    "Entity Type": "ComputationalWorkflow+File+HowTo+SoftwareSourceCode",
+    "Entity Type": "[ComputationalWorkflow, File, HowTo, SoftwareSourceCode]",
     "Ref Count": 1,
     "Test Count": 1,
     "Match": true
