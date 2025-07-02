@@ -68,8 +68,8 @@
   {
     "Entity Type": "PropertyValue",
     "Ref Count": 2,
-    "Test Count": 0,
-    "Match": false
+    "Test Count": 2,
+    "Match": true
   },
   {
     "Entity Type": "SoftwareApplication",

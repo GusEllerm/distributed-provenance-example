@@ -32,7 +32,7 @@ This repository includes a minimal [GitHub Pages](https://gusellerm.github.io/di
 
 A structured comparison has been performed between the **Provenance Run Crate** and the **Distributed Provenance Crate**, using `comparator.py`.
 
-Results are viewable on the Git Page and inlcude:
+Results are viewable on the Git Page and include:
 
 - Entity shape comparisons between crates
 - Validation of structural relationships and constraints as defined in `validation_rules.json`
