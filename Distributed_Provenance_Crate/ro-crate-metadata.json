@@ -424,57 +424,217 @@
       "name": "CPU",
       "description": "CPU properties as reported by lscpu",
       "additionalProperty": [
-        { "@type": "PropertyValue", "name": "Address sizes", "value": "40 bits physical, 48 bits virtual" },
-        { "@type": "PropertyValue", "name": "Architecture", "value": "x86_64" },
-        { "@type": "PropertyValue", "name": "BogoMIPS", "value": "5290.06" },
-        { "@type": "PropertyValue", "name": "Byte Order", "value": "Little Endian" },
-        { "@type": "PropertyValue", "name": "CPU family", "value": "25" },
-        { "@type": "PropertyValue", "name": "CPU op-mode(s)", "value": "32-bit, 64-bit" },
-        { "@type": "PropertyValue", "name": "CPU(s)", "value": "4" },
-        { "@type": "PropertyValue", "name": "Core(s) per socket", "value": "1" },
-        { "@type": "PropertyValue", "name": "Flags", "value": "fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext perfctr_core ssbd ibrs ibpb stibp vmmcall fsgsbase tsc_adjust bmi1 avx2 smep bmi2 rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr wbnoinvd arat npt nrip_save umip vaes vpclmulqdq rdpid arch_capabilities" },
-        { "@type": "PropertyValue", "name": "Hypervisor vendor", "value": "KVM" },
-        { "@type": "PropertyValue", "name": "L1d cache", "value": "128 KiB (4 instances)" },
-        { "@type": "PropertyValue", "name": "L1i cache", "value": "128 KiB (4 instances)" },
-        { "@type": "PropertyValue", "name": "L2 cache", "value": "2 MiB (4 instances)" },
-        { "@type": "PropertyValue", "name": "L3 cache", "value": "128 MiB (4 instances)" },
-        { "@type": "PropertyValue", "name": "Model", "value": "1" },
-        { "@type": "PropertyValue", "name": "Model name", "value": "AMD EPYC-Milan Processor" },
-        { "@type": "PropertyValue", "name": "NUMA node(s)", "value": "1" },
-        { "@type": "PropertyValue", "name": "NUMA node0 CPU(s)", "value": "0-3" },
-        { "@type": "PropertyValue", "name": "On-line CPU(s) list", "value": "0-3" },
-        { "@type": "PropertyValue", "name": "Socket(s)", "value": "4" },
-        { "@type": "PropertyValue", "name": "Stepping", "value": "1" },
-        { "@type": "PropertyValue", "name": "Thread(s) per core", "value": "1" },
-        { "@type": "PropertyValue", "name": "Vendor ID", "value": "AuthenticAMD" },
-        { "@type": "PropertyValue", "name": "Virtualization", "value": "AMD-V" },
-        { "@type": "PropertyValue", "name": "Virtualization type", "value": "full" },
-        { "@type": "PropertyValue", "name": "Vulnerability Gather data sampling", "value": "Not affected" },
-        { "@type": "PropertyValue", "name": "Vulnerability Itlb multihit", "value": "Not affected" },
-        { "@type": "PropertyValue", "name": "Vulnerability L1tf", "value": "Not affected" },
-        { "@type": "PropertyValue", "name": "Vulnerability Mds", "value": "Not affected" },
-        { "@type": "PropertyValue", "name": "Vulnerability Meltdown", "value": "Not affected" },
-        { "@type": "PropertyValue", "name": "Vulnerability Mmio stale data", "value": "Not affected" },
-        { "@type": "PropertyValue", "name": "Vulnerability Retbleed", "value": "Not affected" },
-        { "@type": "PropertyValue", "name": "Vulnerability Spec rstack overflow", "value": "Mitigation; safe RET, no microcode" },
-        { "@type": "PropertyValue", "name": "Vulnerability Spec store bypass", "value": "Mitigation; Speculative Store Bypass disabled via prctl and seccomp" },
-        { "@type": "PropertyValue", "name": "Vulnerability Spectre v1", "value": "Mitigation; usercopy/swapgs barriers and __user pointer sanitization" },
-        { "@type": "PropertyValue", "name": "Vulnerability Spectre v2", "value": "Mitigation; Retpolines, IBPB conditional, IBRS_FW, STIBP disabled, RSB filling, PBRSB-eIBRS Not affected" },
-        { "@type": "PropertyValue", "name": "Vulnerability Srbds", "value": "Not affected" },
-        { "@type": "PropertyValue", "name": "Vulnerability Tsx async abort", "value": "Not affected" }
+        {
+          "@type": "PropertyValue",
+          "name": "Address sizes",
+          "value": "40 bits physical, 48 bits virtual"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Architecture",
+          "value": "x86_64"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "BogoMIPS",
+          "value": "5290.06"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Byte Order",
+          "value": "Little Endian"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "CPU family",
+          "value": "25"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "CPU op-mode(s)",
+          "value": "32-bit, 64-bit"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "CPU(s)",
+          "value": "4"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Core(s) per socket",
+          "value": "1"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Flags",
+          "value": "fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext perfctr_core ssbd ibrs ibpb stibp vmmcall fsgsbase tsc_adjust bmi1 avx2 smep bmi2 rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr wbnoinvd arat npt nrip_save umip vaes vpclmulqdq rdpid arch_capabilities"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Hypervisor vendor",
+          "value": "KVM"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "L1d cache",
+          "value": "128 KiB (4 instances)"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "L1i cache",
+          "value": "128 KiB (4 instances)"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "L2 cache",
+          "value": "2 MiB (4 instances)"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "L3 cache",
+          "value": "128 MiB (4 instances)"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Model",
+          "value": "1"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Model name",
+          "value": "AMD EPYC-Milan Processor"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "NUMA node(s)",
+          "value": "1"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "NUMA node0 CPU(s)",
+          "value": "0-3"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "On-line CPU(s) list",
+          "value": "0-3"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Socket(s)",
+          "value": "4"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Stepping",
+          "value": "1"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Thread(s) per core",
+          "value": "1"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Vendor ID",
+          "value": "AuthenticAMD"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Virtualization",
+          "value": "AMD-V"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Virtualization type",
+          "value": "full"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Vulnerability Gather data sampling",
+          "value": "Not affected"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Vulnerability Itlb multihit",
+          "value": "Not affected"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Vulnerability L1tf",
+          "value": "Not affected"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Vulnerability Mds",
+          "value": "Not affected"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Vulnerability Meltdown",
+          "value": "Not affected"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Vulnerability Mmio stale data",
+          "value": "Not affected"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Vulnerability Retbleed",
+          "value": "Not affected"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Vulnerability Spec rstack overflow",
+          "value": "Mitigation; safe RET, no microcode"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Vulnerability Spec store bypass",
+          "value": "Mitigation; Speculative Store Bypass disabled via prctl and seccomp"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Vulnerability Spectre v1",
+          "value": "Mitigation; usercopy/swapgs barriers and __user pointer sanitization"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Vulnerability Spectre v2",
+          "value": "Mitigation; Retpolines, IBPB conditional, IBRS_FW, STIBP disabled, RSB filling, PBRSB-eIBRS Not affected"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Vulnerability Srbds",
+          "value": "Not affected"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Vulnerability Tsx async abort",
+          "value": "Not affected"
+        }
       ],
-      "performance": { "@id": "#c76d20c0-a8a2-42e1-98ce-762f0cf64bd4" }
+      "performance": {
+        "@id": "#c76d20c0-a8a2-42e1-98ce-762f0cf64bd4"
+      }
     },
     {
       "@id": "#c76d20c0-a8a2-42e1-98ce-762f0cf64bd4",
       "@type": "Observation",
       "measurementTechnique": "Psutil.cpu_percent polled at 0.05",
-      "observationAbout": { "@id": "#19d1a07a-96bf-4fda-8c17-ef512b9e0fbc" },
+      "observationAbout": {
+        "@id": "#19d1a07a-96bf-4fda-8c17-ef512b9e0fbc"
+      },
       "minValue": 0.0,
       "maxValue": 0.0,
-      "value": 0.0,                                          
-      "valueReference": { "@id": "4ce5a46a-fa3c-4366-83a3-80e3abde640a" }, 
-      "image": { "@id": "16938cab-126e-4707-b4c6-54da56fb629e" }
+      "value": 0.0,
+      "valueReference": {
+        "@id": "4ce5a46a-fa3c-4366-83a3-80e3abde640a"
+      },
+      "image": {
+        "@id": "16938cab-126e-4707-b4c6-54da56fb629e"
+      }
     },
     {
       "@id": "#2901f5bd-3103-4d72-a3b6-4310ba80bf36",
@@ -482,17 +642,61 @@
       "name": "RAM",
       "description": "RAM properties as reported by mem_info()",
       "additionalProperty": [
-        { "@type": "PropertyValue", "name": "active", "value": "3142991872" },
-        { "@type": "PropertyValue", "name": "available", "value": "6736965632" },
-        { "@type": "PropertyValue", "name": "buffers", "value": "147083264" },
-        { "@type": "PropertyValue", "name": "cached", "value": "6189883392" },
-        { "@type": "PropertyValue", "name": "free", "value": "725217280" },
-        { "@type": "PropertyValue", "name": "inactive", "value": "3844759552" },
-        { "@type": "PropertyValue", "name": "percent", "value": "19.1" },
-        { "@type": "PropertyValue", "name": "shared", "value": "3461120" },
-        { "@type": "PropertyValue", "name": "slab", "value": "502702080" },
-        { "@type": "PropertyValue", "name": "total", "value": "8323014656" },
-        { "@type": "PropertyValue", "name": "used", "value": "1260830720" }
+        {
+          "@type": "PropertyValue",
+          "name": "active",
+          "value": "3142991872"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "available",
+          "value": "6736965632"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "buffers",
+          "value": "147083264"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "cached",
+          "value": "6189883392"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "free",
+          "value": "725217280"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "inactive",
+          "value": "3844759552"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "percent",
+          "value": "19.1"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "shared",
+          "value": "3461120"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "slab",
+          "value": "502702080"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "total",
+          "value": "8323014656"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "used",
+          "value": "1260830720"
+        }
       ]
     },
     {
@@ -501,12 +705,36 @@
       "name": "Storage",
       "description": "Storage properties as reported by ds",
       "additionalProperty": [
-        { "@type": "PropertyValue", "name": "1K-blocks", "value": "102626232" },
-        { "@type": "PropertyValue", "name": "Available", "value": "97364452" },
-        { "@type": "PropertyValue", "name": "Filesystem", "value": "/dev/vdb" },
-        { "@type": "PropertyValue", "name": "Mounted", "value": "/mnt/storage" },
-        { "@type": "PropertyValue", "name": "Use%", "value": "1%" },
-        { "@type": "PropertyValue", "name": "Used", "value": "2516" }
+        {
+          "@type": "PropertyValue",
+          "name": "1K-blocks",
+          "value": "102626232"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Available",
+          "value": "97364452"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Filesystem",
+          "value": "/dev/vdb"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Mounted",
+          "value": "/mnt/storage"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Use%",
+          "value": "1%"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Used",
+          "value": "2516"
+        }
       ]
     },
     {
@@ -534,7 +762,7 @@
       "@id": "16938cab-126e-4707-b4c6-54da56fb629e",
       "@type": "File",
       "encodingFormat": "image/png",
-      "name": "CPU usage"
+      "name": "CPU usage plot (rev_txt)"
     },
     {
       "@id": "WED.json",
@@ -577,7 +805,7 @@
         "File",
         "DistributedStep"
       ],
-      "name": "Distributed Step Crate",
+      "name": "Distributed Step Crate (rev_txt)",
       "hasPart": {
         "@id": "#bcc0c0cd-ffde-4c77-b3df-8741c9452e75"
       },
@@ -598,59 +826,217 @@
       "name": "CPU",
       "description": "CPU properties as reported by lscpu",
       "additionalProperty": [
-        { "@type": "PropertyValue", "name": "Address sizes", "value": "40 bits physical, 48 bits virtual" },
-        { "@type": "PropertyValue", "name": "Architecture", "value": "x86_64" },
-        { "@type": "PropertyValue", "name": "BogoMIPS", "value": "5290.06" },
-        { "@type": "PropertyValue", "name": "Byte Order", "value": "Little Endian" },
-        { "@type": "PropertyValue", "name": "CPU family", "value": "25" },
-        { "@type": "PropertyValue", "name": "CPU op-mode(s)", "value": "32-bit, 64-bit" },
-        { "@type": "PropertyValue", "name": "CPU(s)", "value": "4" },
-        { "@type": "PropertyValue", "name": "Core(s) per socket", "value": "1" },
-        { "@type": "PropertyValue", "name": "Flags", "value": "fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext perfctr_core ssbd ibrs ibpb stibp vmmcall fsgsbase tsc_adjust bmi1 avx2 smep bmi2 rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr wbnoinvd arat npt nrip_save umip vaes vpclmulqdq rdpid arch_capabilities" },
-        { "@type": "PropertyValue", "name": "Hypervisor vendor", "value": "KVM" },
-        { "@type": "PropertyValue", "name": "L1d cache", "value": "128 KiB (4 instances)" },
-        { "@type": "PropertyValue", "name": "L1i cache", "value": "128 KiB (4 instances)" },
-        { "@type": "PropertyValue", "name": "L2 cache", "value": "2 MiB (4 instances)" },
-        { "@type": "PropertyValue", "name": "L3 cache", "value": "128 MiB (4 instances)" },
-        { "@type": "PropertyValue", "name": "Model", "value": "1" },
-        { "@type": "PropertyValue", "name": "Model name", "value": "AMD EPYC-Milan Processor" },
-        { "@type": "PropertyValue", "name": "NUMA node(s)", "value": "1" },
-        { "@type": "PropertyValue", "name": "NUMA node0 CPU(s)", "value": "0-3" },
-        { "@type": "PropertyValue", "name": "On-line CPU(s) list", "value": "0-3" },
-        { "@type": "PropertyValue", "name": "Socket(s)", "value": "4" },
-        { "@type": "PropertyValue", "name": "Stepping", "value": "1" },
-        { "@type": "PropertyValue", "name": "Thread(s) per core", "value": "1" },
-        { "@type": "PropertyValue", "name": "Vendor ID", "value": "AuthenticAMD" },
-        { "@type": "PropertyValue", "name": "Virtualization", "value": "AMD-V" },
-        { "@type": "PropertyValue", "name": "Virtualization type", "value": "full" },
-        { "@type": "PropertyValue", "name": "Vulnerability Gather data sampling", "value": "Not affected" },
-        { "@type": "PropertyValue", "name": "Vulnerability Itlb multihit", "value": "Not affected" },
-        { "@type": "PropertyValue", "name": "Vulnerability L1tf", "value": "Not affected" },
-        { "@type": "PropertyValue", "name": "Vulnerability Mds", "value": "Not affected" },
-        { "@type": "PropertyValue", "name": "Vulnerability Meltdown", "value": "Not affected" },
-        { "@type": "PropertyValue", "name": "Vulnerability Mmio stale data", "value": "Not affected" },
-        { "@type": "PropertyValue", "name": "Vulnerability Retbleed", "value": "Not affected" },
-        { "@type": "PropertyValue", "name": "Vulnerability Spec rstack overflow", "value": "Mitigation; safe RET, no microcode" },
-        { "@type": "PropertyValue", "name": "Vulnerability Spec store bypass", "value": "Mitigation; Speculative Store Bypass disabled via prctl and seccomp" },
-        { "@type": "PropertyValue", "name": "Vulnerability Spectre v1", "value": "Mitigation; usercopy/swapgs barriers and __user pointer sanitization" },
-        { "@type": "PropertyValue", "name": "Vulnerability Spectre v2", "value": "Mitigation; Retpolines, IBPB conditional, IBRS_FW, STIBP disabled, RSB filling, PBRSB-eIBRS Not affected" },
-        { "@type": "PropertyValue", "name": "Vulnerability Srbds", "value": "Not affected" },
-        { "@type": "PropertyValue", "name": "Vulnerability Tsx async abort", "value": "Not affected" }
+        {
+          "@type": "PropertyValue",
+          "name": "Address sizes",
+          "value": "40 bits physical, 48 bits virtual"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Architecture",
+          "value": "x86_64"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "BogoMIPS",
+          "value": "5290.06"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Byte Order",
+          "value": "Little Endian"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "CPU family",
+          "value": "25"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "CPU op-mode(s)",
+          "value": "32-bit, 64-bit"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "CPU(s)",
+          "value": "4"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Core(s) per socket",
+          "value": "1"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Flags",
+          "value": "fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext perfctr_core ssbd ibrs ibpb stibp vmmcall fsgsbase tsc_adjust bmi1 avx2 smep bmi2 rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr wbnoinvd arat npt nrip_save umip vaes vpclmulqdq rdpid arch_capabilities"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Hypervisor vendor",
+          "value": "KVM"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "L1d cache",
+          "value": "128 KiB (4 instances)"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "L1i cache",
+          "value": "128 KiB (4 instances)"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "L2 cache",
+          "value": "2 MiB (4 instances)"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "L3 cache",
+          "value": "128 MiB (4 instances)"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Model",
+          "value": "1"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Model name",
+          "value": "AMD EPYC-Milan Processor"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "NUMA node(s)",
+          "value": "1"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "NUMA node0 CPU(s)",
+          "value": "0-3"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "On-line CPU(s) list",
+          "value": "0-3"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Socket(s)",
+          "value": "4"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Stepping",
+          "value": "1"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Thread(s) per core",
+          "value": "1"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Vendor ID",
+          "value": "AuthenticAMD"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Virtualization",
+          "value": "AMD-V"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Virtualization type",
+          "value": "full"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Vulnerability Gather data sampling",
+          "value": "Not affected"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Vulnerability Itlb multihit",
+          "value": "Not affected"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Vulnerability L1tf",
+          "value": "Not affected"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Vulnerability Mds",
+          "value": "Not affected"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Vulnerability Meltdown",
+          "value": "Not affected"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Vulnerability Mmio stale data",
+          "value": "Not affected"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Vulnerability Retbleed",
+          "value": "Not affected"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Vulnerability Spec rstack overflow",
+          "value": "Mitigation; safe RET, no microcode"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Vulnerability Spec store bypass",
+          "value": "Mitigation; Speculative Store Bypass disabled via prctl and seccomp"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Vulnerability Spectre v1",
+          "value": "Mitigation; usercopy/swapgs barriers and __user pointer sanitization"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Vulnerability Spectre v2",
+          "value": "Mitigation; Retpolines, IBPB conditional, IBRS_FW, STIBP disabled, RSB filling, PBRSB-eIBRS Not affected"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Vulnerability Srbds",
+          "value": "Not affected"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Vulnerability Tsx async abort",
+          "value": "Not affected"
+        }
       ],
-      "performance": { "@id": "#4478968e-caaa-49a6-b614-8600e5e7603c" }
+      "performance": {
+        "@id": "#4478968e-caaa-49a6-b614-8600e5e7603c"
+      }
     },
     {
-        "@id": "#4478968e-caaa-49a6-b614-8600e5e7603c",
-        "@type": "Observation",
-        "image": { "@id": "b74052a9-1a76-4f1e-b48a-e892fbadc1cb" },
-        "maxValue": 0.0,
-        "measurementTechnique": "Psutil.cpu_percent polled at 0.05",
-        "minValue": 0.0,
-        "value": 0.0,
-        "valueReference": { "@id": "3e1d8118-cf5d-4549-b0f4-41f831389205" },
-        "observationAbout": {
-            "@id": "#403381b5-2242-4099-9589-a50d557eba80"
-        }
+      "@id": "#4478968e-caaa-49a6-b614-8600e5e7603c",
+      "@type": "Observation",
+      "image": {
+        "@id": "b74052a9-1a76-4f1e-b48a-e892fbadc1cb"
+      },
+      "maxValue": 0.0,
+      "measurementTechnique": "Psutil.cpu_percent polled at 0.05",
+      "minValue": 0.0,
+      "value": 0.0,
+      "valueReference": {
+        "@id": "3e1d8118-cf5d-4549-b0f4-41f831389205"
+      },
+      "observationAbout": {
+        "@id": "#403381b5-2242-4099-9589-a50d557eba80"
+      }
     },
     {
       "@id": "#b7aa95e9-9006-42e0-b8d1-d4868ea1a431",
@@ -658,17 +1044,61 @@
       "name": "RAM",
       "description": "RAM properties as reported by mem_info()",
       "additionalProperty": [
-        { "@type": "PropertyValue", "name": "active", "value": "2909184000" },
-        { "@type": "PropertyValue", "name": "available", "value": "6746652672" },
-        { "@type": "PropertyValue", "name": "buffers", "value": "101249024" },
-        { "@type": "PropertyValue", "name": "cached", "value": "5645135872" },
-        { "@type": "PropertyValue", "name": "free", "value": "1325527040" },
-        { "@type": "PropertyValue", "name": "inactive", "value": "3493847040" },
-        { "@type": "PropertyValue", "name": "percent", "value": "18.9" },
-        { "@type": "PropertyValue", "name": "shared", "value": "3493888" },
-        { "@type": "PropertyValue", "name": "slab", "value": "503271424" },
-        { "@type": "PropertyValue", "name": "total", "value": "8323014656" },
-        { "@type": "PropertyValue", "name": "used", "value": "1251102720" }
+        {
+          "@type": "PropertyValue",
+          "name": "active",
+          "value": "2909184000"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "available",
+          "value": "6746652672"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "buffers",
+          "value": "101249024"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "cached",
+          "value": "5645135872"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "free",
+          "value": "1325527040"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "inactive",
+          "value": "3493847040"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "percent",
+          "value": "18.9"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "shared",
+          "value": "3493888"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "slab",
+          "value": "503271424"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "total",
+          "value": "8323014656"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "used",
+          "value": "1251102720"
+        }
       ]
     },
     {
@@ -677,12 +1107,36 @@
       "name": "Storage",
       "description": "Storage properties as reported by ds",
       "additionalProperty": [
-        { "@type": "PropertyValue", "name": "1K-blocks", "value": "102626232" },
-        { "@type": "PropertyValue", "name": "Available", "value": "97364356" },
-        { "@type": "PropertyValue", "name": "Filesystem", "value": "/dev/vdb" },
-        { "@type": "PropertyValue", "name": "Mounted", "value": "/mnt/storage" },
-        { "@type": "PropertyValue", "name": "Use%", "value": "1%" },
-        { "@type": "PropertyValue", "name": "Used", "value": "2612" }
+        {
+          "@type": "PropertyValue",
+          "name": "1K-blocks",
+          "value": "102626232"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Available",
+          "value": "97364356"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Filesystem",
+          "value": "/dev/vdb"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Mounted",
+          "value": "/mnt/storage"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Use%",
+          "value": "1%"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Used",
+          "value": "2612"
+        }
       ]
     },
     {
@@ -707,22 +1161,22 @@
       "name": "The University of Auckland"
     },
     {
-        "@id": "4ce5a46a-fa3c-4366-83a3-80e3abde640a",
-        "@type": "File",
-        "encodingFormat": "application/json",
-        "name": "CPU usage"
+      "@id": "4ce5a46a-fa3c-4366-83a3-80e3abde640a",
+      "@type": "File",
+      "encodingFormat": "application/json",
+      "name": "CPU usage trace (rev_txt)"
     },
     {
       "@id": "b74052a9-1a76-4f1e-b48a-e892fbadc1cb",
       "@type": "File",
       "encodingFormat": "image/png",
-      "name": "CPU usage"
+      "name": "CPU usage plot (sort_txt)"
     },
     {
       "@id": "3e1d8118-cf5d-4549-b0f4-41f831389205",
       "@type": "File",
       "encodingFormat": "application/json",
-      "name": "CPU usage"
+      "name": "CPU usage trace (sort_txt)"
     },
     {
       "@id": "9e547861-e3c3-4f26-8e7e-91c7c4a0a557",
@@ -753,7 +1207,7 @@
         "File",
         "DistributedStep"
       ],
-      "name": "Distributed Step Crate",
+      "name": "Distributed Step Crate (sort_txt)",
       "hasPart": {
         "@id": "#b8a80195-f749-40c0-96a8-78f0db612cf2"
       },
