@@ -6,6 +6,7 @@
   "codeRepository": "https://github.com/GusEllerm/distributed-provenance-example",
   "license": "Apache-2.0",
   "version": "1.0.0",
+  "identifier": "https://doi.org/10.5281/zenodo.18253439",
   "author": {
     "@type": "Person",
     "@id": "https://orcid.org/0000-0001-8260-231X",

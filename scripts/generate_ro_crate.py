@@ -63,6 +63,7 @@ def main() -> None:
     )
     root["license"] = "Apache-2.0"
     root["version"] = "1.0.0"
+    root["identifier"] = "https://doi.org/10.5281/zenodo.18253439"
     root["creator"] = creator
     root["mainEntity"] = viewer
 
