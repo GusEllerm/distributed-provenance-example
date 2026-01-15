@@ -5,7 +5,7 @@
   "description": "Interactive RO-Crate viewer and example Distributed Provenance Crate (DPC) and Distributed Step Crate (DSC) data used to browse and inspect distributed provenance records.",
   "codeRepository": "https://github.com/GusEllerm/distributed-provenance-example",
   "license": "Apache-2.0",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "identifier": "https://doi.org/10.5281/zenodo.18253439",
   "author": {
     "@type": "Person",

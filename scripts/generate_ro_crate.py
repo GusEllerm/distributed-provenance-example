@@ -50,7 +50,7 @@ def main() -> None:
                 "description": "Viewer used to browse the DPC/DSC example crates.",
                 "codeRepository": "https://github.com/GusEllerm/distributed-provenance-example",
                 "license": "Apache-2.0",
-                "version": "1.0.0",
+                "version": "1.0.1",
             },
         )
     )
@@ -62,7 +62,7 @@ def main() -> None:
         "Distributed Step Crate (DSC) data used to browse and inspect distributed provenance records."
     )
     root["license"] = "Apache-2.0"
-    root["version"] = "1.0.0"
+    root["version"] = "1.0.1"
     root["identifier"] = "https://doi.org/10.5281/zenodo.18253439"
     root["creator"] = creator
     root["mainEntity"] = viewer

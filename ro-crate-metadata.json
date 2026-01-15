@@ -7,7 +7,7 @@
             "creator": {
                 "@id": "https://orcid.org/0000-0001-8260-231X"
             },
-            "datePublished": "2026-01-15T07:06:51+00:00",
+            "datePublished": "2026-01-15T07:08:41+00:00",
             "description": "Interactive RO-Crate viewer and example Distributed Provenance Crate (DPC) and Distributed Step Crate (DSC) data used to browse and inspect distributed provenance records.",
             "hasPart": [
                 {
@@ -56,7 +56,7 @@
                 "@id": "#viewer"
             },
             "name": "Interactive Distributed Provenance Example (DPC/DSC)",
-            "version": "1.0.0"
+            "version": "1.0.1"
         },
         {
             "@id": "ro-crate-metadata.json",
@@ -80,7 +80,7 @@
             "description": "Viewer used to browse the DPC/DSC example crates.",
             "license": "Apache-2.0",
             "name": "Interactive Distributed Provenance Example (DPC/DSC)",
-            "version": "1.0.0"
+            "version": "1.0.1"
         },
         {
             "@id": "README.md",
