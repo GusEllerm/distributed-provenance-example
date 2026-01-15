@@ -1,0 +1,150 @@
+{
+    "@context": "https://w3id.org/ro/crate/1.1/context",
+    "@graph": [
+        {
+            "@id": "./",
+            "@type": "Dataset",
+            "creator": {
+                "@id": "https://orcid.org/0000-0001-8260-231X"
+            },
+            "datePublished": "2026-01-15T06:56:44+00:00",
+            "description": "Interactive RO-Crate viewer and example Distributed Provenance Crate (DPC) and Distributed Step Crate (DSC) data used to browse and inspect distributed provenance records.",
+            "hasPart": [
+                {
+                    "@id": "README.md"
+                },
+                {
+                    "@id": "index.html"
+                },
+                {
+                    "@id": "comparator.py"
+                },
+                {
+                    "@id": "validation_rules.json"
+                },
+                {
+                    "@id": "Distributed_Provenance_Crate/"
+                },
+                {
+                    "@id": "e7beae76-bf36-4484-bcc7-9ad133b0c5e2/"
+                },
+                {
+                    "@id": "validation/"
+                },
+                {
+                    "@id": "CITATION.cff"
+                },
+                {
+                    "@id": "codemeta.json"
+                },
+                {
+                    "@id": ".zenodo.json"
+                },
+                {
+                    "@id": "LICENSE"
+                },
+                {
+                    "@id": "scripts/generate_ro_crate.py"
+                },
+                {
+                    "@id": "scripts/validate_metadata.py"
+                }
+            ],
+            "license": "Apache-2.0",
+            "mainEntity": {
+                "@id": "#viewer"
+            },
+            "name": "Interactive Distributed Provenance Example (DPC/DSC)",
+            "version": "1.0.0"
+        },
+        {
+            "@id": "ro-crate-metadata.json",
+            "@type": "CreativeWork",
+            "about": {
+                "@id": "./"
+            },
+            "conformsTo": {
+                "@id": "https://w3id.org/ro/crate/1.1"
+            }
+        },
+        {
+            "@id": "https://orcid.org/0000-0001-8260-231X",
+            "@type": "Person",
+            "name": "Augustus Ellerm"
+        },
+        {
+            "@id": "#viewer",
+            "@type": "SoftwareSourceCode",
+            "codeRepository": "https://github.com/GusEllerm/distributed-provenance-example",
+            "description": "Viewer used to browse the DPC/DSC example crates.",
+            "license": "Apache-2.0",
+            "name": "Interactive Distributed Provenance Example (DPC/DSC)",
+            "version": "1.0.0"
+        },
+        {
+            "@id": "README.md",
+            "@type": "File",
+            "name": "Repository README"
+        },
+        {
+            "@id": "index.html",
+            "@type": "File",
+            "name": "Viewer entrypoint"
+        },
+        {
+            "@id": "comparator.py",
+            "@type": "File",
+            "name": "Comparison utility"
+        },
+        {
+            "@id": "validation_rules.json",
+            "@type": "File",
+            "name": "Validation rules"
+        },
+        {
+            "@id": "Distributed_Provenance_Crate/",
+            "@type": "Dataset",
+            "name": "Distributed Provenance Crate example"
+        },
+        {
+            "@id": "e7beae76-bf36-4484-bcc7-9ad133b0c5e2/",
+            "@type": "Dataset",
+            "name": "Distributed Step Crates (DSC) examples"
+        },
+        {
+            "@id": "validation/",
+            "@type": "Dataset",
+            "name": "Validation outputs and summaries"
+        },
+        {
+            "@id": "CITATION.cff",
+            "@type": "File",
+            "name": "Citation metadata"
+        },
+        {
+            "@id": "codemeta.json",
+            "@type": "File",
+            "name": "CodeMeta metadata"
+        },
+        {
+            "@id": ".zenodo.json",
+            "@type": "File",
+            "name": "Zenodo metadata"
+        },
+        {
+            "@id": "LICENSE",
+            "@type": "File",
+            "name": "License"
+        },
+        {
+            "@id": "scripts/generate_ro_crate.py",
+            "@type": "File",
+            "name": "RO-Crate generator"
+        },
+        {
+            "@id": "scripts/validate_metadata.py",
+            "@type": "File",
+            "name": "Metadata validator"
+        }
+    ]
+}

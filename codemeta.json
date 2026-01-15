@@ -1,0 +1,30 @@
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+  "@type": "SoftwareSourceCode",
+  "name": "Interactive Distributed Provenance Example (DPC/DSC)",
+  "description": "Interactive RO-Crate viewer and example Distributed Provenance Crate (DPC) and Distributed Step Crate (DSC) data used to browse and inspect distributed provenance records.",
+  "codeRepository": "https://github.com/GusEllerm/distributed-provenance-example",
+  "license": "Apache-2.0",
+  "version": "1.0.0",
+  "author": {
+    "@type": "Person",
+    "@id": "https://orcid.org/0000-0001-8260-231X",
+    "givenName": "Augustus",
+    "familyName": "Ellerm"
+  },
+  "keywords": [
+    "provenance",
+    "RO-Crate",
+    "DPC",
+    "DSC",
+    "Globus",
+    "distributed workflows",
+    "interactive viewer"
+  ],
+  "programmingLanguage": [
+    "HTML",
+    "CSS",
+    "Python"
+  ]
+}
+

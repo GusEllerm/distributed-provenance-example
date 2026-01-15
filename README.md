@@ -1,55 +1,36 @@
-# Example: Distributed Provenance-Aware Workflow using Distributed Step Crate Extension
+# Interactive Distributed Provenance Example (DPC/DSC)
 
-This repository provides an example of a **Distributed Provenance-Aware Workflow**, using the **Distributed Step Crate extension** applied to the **Provenance Run Crate** specification. It is implemented in the context of a real production Workflow Management System (WMS): **Globus Flows**.
+This repository contains the interactive **Distributed Provenance Crate (DPC)** and **Distributed Step Crate (DSC)** example used to browse and inspect a distributed provenance record in a web viewer. It provides a live, click-through demonstration of the DPC/DSC representations and includes the example crate data alongside validation outputs. It supports thesis Chapter 5 by serving as the interactive reference for the distributed provenance example.
 
----
+**Live demo:** https://gusellerm.github.io/distributed-provenance-example/
 
-## Contents
+## What’s included
+
+- `Distributed_Provenance_Crate/` example DPC (Provenance Run Crate extension).
+- `e7beae76-bf36-4484-bcc7-9ad133b0c5e2/` example DSCs (two step crates).
+- `validation/` comparison outputs and rendered validation summary.
+- `comparator.py` and `validation_rules.json` for shape/structure checks.
+
+## How to run locally
 
 ```
-├── index.html                          
-├── Distributed_Provenance_Crate/ # Example Distributed Provenance Crate
-├── validation/ # Validation results and comparison summaries
-│   ├── entity_shape_comparison.json
-│   ├── validation_output.json
-│   └── reference_manifest.json
-└── e7beae76-bf36-4484-bcc7-9ad133b0c5e2/
-    ├── 395cdbd9-5b81-49a2-a7ae-9d84a8f70428/ # Distributed Step Crate 1
-    └── 88102f1e-8d80-43c8-ab8b-6006458475f3/ # Distributed Step Crate 2
+python3 -m http.server 8000
 ```
 
-Each **Distributed Step Crate** corresponds to a granular step in the overall workflow, executed independently via Globus Flows and collated within an Orchestration Node. The full **Provenance Run Crate** extension integrates these **Distributed Step Crates** to provide a contiguous provenance record of the distributed workflow's run.
+Open `http://localhost:8000/index.html`.
 
----
+## Schemas / terms
 
-## Web Preview
+- LivePublication Interface Schemas (DPC/DSC) DOI: https://doi.org/10.5281/zenodo.18250033
+- DPC terms: https://w3id.org/livepublication/interface-schemas/dpc
+- DSC terms: https://w3id.org/livepublication/interface-schemas/dsc
+- DPC/DSC context: https://w3id.org/livepublication/interface-schemas/contexts/lp-dscdpc/v1.jsonld
 
-This repository includes a minimal [GitHub Pages](https://gusellerm.github.io/distributed-provenance-example/) site to preview the Distributed Provenance Crate and its constituent Distributed Step Crate.
+## How to cite
 
----
-
-## Validation Summary
-
-A structured comparison has been performed between the **Provenance Run Crate** and the **Distributed Provenance Crate**, using `comparator.py`.
-
-Results are viewable on the Git Page and include:
-
-- Entity shape comparisons between crates
-- Validation of structural relationships and constraints as defined in `validation_rules.json`
-
----
+Use the Zenodo DOI once a release is published (see `CITATION.cff`).  
+TODO: backfill the Zenodo DOI and release version after minting.
 
 ## License
 
-This work is licensed under the **Creative Commons Attribution 4.0 International (CC BY 4.0)** License.
-You are free to share and adapt the materials for any purpose, provided appropriate credit is given.
-
-More information: [https://creativecommons.org/licenses/by/4.0/](https://creativecommons.org/licenses/by/4.0/)
-
----
-
-## References
-
-- [RO-Crate Specification](https://www.researchobject.org/ro-crate/)
-- [Provenance Run Crate](https://www.researchobject.org/workflow-run-crate/profiles/provenance_run_crate/)
-- [Globus Flows](https://www.globus.org/globus-flows)
+Apache License 2.0. See `LICENSE`.
