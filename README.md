@@ -1,4 +1,4 @@
-# Interactive Distributed Provenance Example (DPC/DSC) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18253439.svg)](https://doi.org/10.5281/zenodo.18253439)
+# Interactive Distributed Provenance Example (DPC/DSC) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18253488.svg)](https://doi.org/10.5281/zenodo.18253488)
 
 This repository contains the interactive **Distributed Provenance Crate (DPC)** and **Distributed Step Crate (DSC)** example used to browse and inspect a distributed provenance record in a web viewer. It provides a live, click-through demonstration of the DPC/DSC representations and includes the example crate data alongside validation outputs. It supports thesis Chapter 5 by serving as the interactive reference for the distributed provenance example.
 

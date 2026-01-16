@@ -2,7 +2,7 @@
   "title": "Interactive Distributed Provenance Example (DPC/DSC)",
   "description": "Interactive RO-Crate viewer and example Distributed Provenance Crate (DPC) and Distributed Step Crate (DSC) data used to browse and inspect distributed provenance records.",
   "upload_type": "software",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "creators": [
     {
       "name": "Ellerm, Augustus",
