@@ -14,6 +14,9 @@
       "datePublished": "2025-06-29T04:08:06+00:00",
       "conformsTo": [
         {
+          "@id": "https://w3id.org/ro/crate/1.1"
+        },
+        {
           "@id": "https://w3id.org/ro/wfrun/process/0.1"
         },
         {
@@ -24,9 +27,6 @@
         },
         {
           "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0"
-        },
-        {
-          "@id": "https://w3id.org/livepublication/interface-schemas/dpc"
         }
       ],
       "hasPart": [
@@ -82,12 +82,25 @@
       },
       "conformsTo": [
         {
-          "@id": "https://w3id.org/ro/crate/1.1"
+          "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0"
         },
         {
-          "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0"
+          "@id": "https://w3id.org/livepublication/interface-schemas/dpc/index.html#profile-1.0"
         }
       ]
+    },
+    {
+      "@id": "https://w3id.org/livepublication/interface-schemas/dpc/index.html#profile-1.0",
+      "@type": "CreativeWork",
+      "name": "Distributed Provenance Crate Profile",
+      "description": "A profile for distributed provenance crates.",
+      "version": "1.0"
+    },
+    {
+      "@id": "https://w3id.org/ro/crate/1.1",
+      "@type": "CreativeWork",
+      "name": "RO-Crate",
+      "version": "1.1"
     },
     {
       "@id": "WEP.json",

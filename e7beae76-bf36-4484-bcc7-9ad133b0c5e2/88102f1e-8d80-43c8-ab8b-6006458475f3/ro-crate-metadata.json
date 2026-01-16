@@ -26,6 +26,11 @@
                     "@id": "2753cdea-1429-4172-b0d5-c63e95b2ce6b"
                 }
             ],
+            "conformsTo": [
+                {
+                    "@id": "https://livepublication.org/interface-schemas/dsc/index.html#profile-1.0"
+                }
+            ],
             "mainEntity": {
                 "@id": "2753cdea-1429-4172-b0d5-c63e95b2ce6b"
             }
@@ -39,13 +44,17 @@
             "conformsTo": 
             [
                 {
-                    "@id": "https://w3id.org/ro/crate/1.1"
-                },
-                {
-                    "@id": "https://w3id.org/livepublication/interface-schemas/dsc"
+                    "@id": "https://livepublication.org/interface-schemas/dsc/index.html#profile-1.0"
                 }
                 
             ]
+        },
+        {
+            "@id": "https://w3id.org/livepublication/interface-schemas/dsc/index.html#profile-1.0",
+            "@type": "CreativeWork",
+            "name": "Distributed Step Crate Profile",
+            "description": "A profile for distributed step crates.",
+            "version": "1.0"
         },
         {
             "@id": "b74052a9-1a76-4f1e-b48a-e892fbadc1cb",
