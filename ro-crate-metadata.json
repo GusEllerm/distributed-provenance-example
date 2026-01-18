@@ -56,7 +56,7 @@
                 "@id": "#viewer"
             },
             "name": "Interactive Distributed Provenance Example (DPC/DSC)",
-            "version": "1.0.2"
+            "version": "1.0.3"
         },
         {
             "@id": "ro-crate-metadata.json",

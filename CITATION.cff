@@ -10,7 +10,7 @@ repository-code: https://github.com/GusEllerm/distributed-provenance-example
 url: https://github.com/GusEllerm/distributed-provenance-example
 abstract: "Interactive RO-Crate viewer and example Distributed Provenance Crate (DPC) and Distributed Step Crate (DSC) data used to browse and inspect distributed provenance records."
 license: Apache-2.0
-version: "1.0.2"
+version: "1.0.3"
 doi: 10.5281/zenodo.18253439
 keywords:
   - provenance
